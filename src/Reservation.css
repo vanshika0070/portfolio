@@ -234,5 +234,10 @@
   transform: none;
 }
 
+
+.policy-note{
+display: none;
+}
+
 }
 

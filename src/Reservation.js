@@ -427,7 +427,7 @@ setStatusMessage("We look forward to welcoming you soon.");
 
         <div className="link-row">
           <a className="link-cell" href="/policies">
-            <p className="policy-note d-none d-lg-block">
+            <p className="policy-note">
               By booking, you agree to our
             </p>
 
