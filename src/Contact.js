@@ -92,10 +92,15 @@ function Contact() {
       <span className="link-arrow">→</span>
     </a>
 
-    <a className="link-cell" href="#">
-      <span className="link-label">Instagram</span>
-      <span className="link-arrow">→</span>
-    </a>
+   <a
+  className="link-cell"
+  href="https://instagram.com/YOUR_INSTAGRAM_USERNAME"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <span className="link-label">Instagram</span>
+  <span className="link-arrow">→</span>
+</a>
 
   </div>
 
