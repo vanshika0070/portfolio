@@ -1,0 +1,433 @@
+
+body{
+   font-family: system-ui, -apple-system, Arial, sans-serif;
+   overflow-x: hidden;
+  margin: 0;
+	padding: 0;
+  color:var(--text-hover) !important;
+  line-height: 1.8;
+  font-size: 1rem;
+  img{ max-width: 100%; height: auto; display: block; }
+  background: var(--black);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a{text-decoration:none;
+color: var(--text-hover) !important;}
+
+
+a:hover {
+color:var(--text-highlight) !important;
+          /* transform: translateY(-2px); */
+}
+
+::selection {
+  background: transparent !important; /* pink */
+  color: var(--text-highlight);
+}
+
+
+
+:root {
+    --black: #000; 
+    --border:#2e2e2e;
+    --border-h:#414040; 
+    --btn-bgh:#181717;
+    --btn-bg:#0f0f0f;
+    --card-bg:#070707;
+    --text:#7c7b7b;
+    --text-hover:#ecd9ce;
+    --text-highlight: #c9a96e;
+    --white:#fff;
+
+}
+
+/* ///////////////////////////////////////////// */
+
+
+
+ .btn {
+  display: inline-block;
+  padding: 8px 30px;
+  border:1px solid var(--border);
+  border-radius: 7px;
+   background: var(--btn-bg) !important;
+  color: var(--text-hover);
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: 500;
+  transition: 0.3s ease;
+  position: relative;
+  font-size: 0.8rem;
+  z-index:9;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background: var(--btn-bgh) !important;
+  border:1px solid var(--border-h);
+}
+
+h1{
+  font-size:clamp(3rem,6vw,5rem);
+  font-weight:700;
+  line-height:1.1;
+  letter-spacing:-1px;
+  margin-bottom:28px;
+}
+
+
+.h2{
+  color: var(--text-highlight);
+  font-size: 30px;
+  font-weight: 500;
+}
+
+h3{
+  font-size:1.9rem;
+  line-height:1.15;
+  color:var(--text-hover);
+  margin-bottom:24px;
+  font-weight:600;
+}
+
+h4{
+  font-size: 0.9rem;
+    color: var(--text-hover);
+}
+
+
+
+/* /////////////////////////////////////// */
+
+
+
+
+  .link-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px;
+  }
+
+  .link-cell {
+    padding: 1.8rem 2.5rem;
+    display: flex;
+    border: 1px solid var(--border);
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: background 0.35s ease;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .link-cell::after {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 2px;
+    background: var(--text-highlight);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.4s ease;
+  }
+
+  .link-cell:hover::after { transform: scaleY(1); }
+
+
+.link-arrow{
+  display:inline-flex;
+  color: var(--text-highlight);
+  transition: transform 0.35s ease, color 0.35s ease;
+}
+
+  .link-cell:hover .link-arrow { 
+    transform: translateX(4px); 
+    color: var(--text-highlight); 
+  }
+
+
+   .link-label {
+    font-size: 10px;
+    font-weight: 500;                                                                                                                                                                    
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-highlight);
+    transition: color 0.3s;
+  }
+
+
+   
+  .link-cell:hover .link-label { color: var(--text-highlight); }
+
+
+
+
+  .divider-line { flex: 1; height: 1px; background: var(--btn-bgh); margin-top: 100px;}
+
+
+
+  /* ///////////////////////////////////////////// */
+
+
+
+
+
+
+
+
+@media (max-width: 1199px) and (min-width:757px){
+  header {
+  padding: 30px;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    border:1px solid var(--border);
+  gap: 28px; /* spacing between logo, menu, button */
+  width: fit-content;
+  max-width: 100%;
+  padding: 8px 18px;
+  border-radius:10px;
+  background: var(--black);
+}
+
+ .modal-nav-links a:hover {
+  letter-spacing: normal;
+}
+
+  .banner{
+    height:auto;
+    min-height:100vh;
+    grid-template-columns:1fr !important;
+    grid-template-rows:70vh auto;
+    padding:4px;
+    gap:10px;
+  }
+
+  .hero-cell{
+    border-radius:10px;
+    min-height:60vh;
+  }
+
+  .hero-content{
+    bottom:30px;
+    left:24px;
+    right:24px;
+  }
+
+  h1{
+    font-size:3rem;
+  }
+
+  .right-col{
+    grid-template-columns:1fr;
+    height:auto;
+  }
+
+  .panel{
+    border-radius:10px;
+    height: 400px;
+  }
+
+    .panel:hover img{
+  opacity:0.95;
+  transform:none;
+}
+  .about{
+    grid-template-columns:1fr;
+    height:auto;
+  }
+
+  /* normal scrolling */
+  .about-cell{
+    min-height:70vh;
+    overflow:visible;
+  }
+
+  .about-cell img{
+    height:auto;
+    min-height:70vh;
+  }
+
+      .feature-grid{
+        grid-template-columns:1fr 1fr;
+      }
+  
+
+      
+  h3{
+    font-size:1.8rem;
+  }
+
+  .bocks {
+  width: 100%;
+  padding: 20px;
+}
+
+  .about-col{
+    gap:1px;
+  }
+
+     .address-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1px;
+  }
+
+  .link-cell:hover .link-arrow { 
+    transform:none; 
+    color: var(--text-highlight); 
+  }
+
+ .link-cell {
+       transform: none;
+  }
+
+
+  .link-cell::after {
+        transform: none;
+  }
+
+     .link-cell:hover::after{
+       transform: none; 
+      }
+
+
+.reservation-cta:hover .link-arrow{
+  transform: none;
+}
+
+   .excellence-grid{
+        grid-template-columns:repeat(2,1fr) !important;
+    }
+
+      .excellence-card:hover{
+    transform:none;
+}
+
+.culinary-excellence .hcard-text{
+font-size: 25px;
+width:80% !important;
+}
+
+}
+
+
+
+
+
+
+@media (max-width: 756px) {
+
+  h1{
+    font-size:2rem;
+  }
+
+    h3{
+    font-size:2rem;
+  }
+
+  .right-col{
+    grid-template-columns:1fr;
+    height:auto;
+  }
+
+  .panel{
+    border-radius:10px;
+    height: 400px;
+  }
+
+  .panel:hover img{
+  opacity:0.95;
+  transform:none;
+}
+
+ .hero-content {
+        left: 20px;
+        right: 18px;
+        bottom: 20px;
+        max-width: 70%;
+      }
+
+      .hero-eyebrow { font-size: 0.55rem; }
+
+ .two-column {
+    flex-direction: column;
+    gap:0 !important;
+  }
+
+     h4{ font-size: 1rem; }
+
+  .address-strip, .link-row{
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 1px;
+  }
+
+  .info-cell,
+  .address-cell,
+  .link-cell{
+    padding:1.5rem;
+  }
+
+  .cta-heading{
+    font-size:30px;
+  }
+
+  .map-label{
+    flex-direction:column;
+    gap:15px;
+    align-items:flex-start;
+  }
+
+    .link-cell:hover .link-arrow { 
+    transform:none; 
+    color: var(--text-highlight); 
+  }
+
+ .link-cell {
+       transform: none;
+  }
+
+  .link-cell::after {
+        transform: none;
+  }
+
+     .link-cell:hover::after{
+       transform: none; 
+      }
+
+.reservation-cta:hover .link-arrow{
+  transform: none;
+}
+
+
+  
+   .excellence-grid{
+        grid-template-columns:1fr !important;
+    }
+
+    .excellence-card:hover{
+    transform:none;
+}
+
+.culinary-excellence .hcard-text{
+font-size: 1.2rem !important;
+width:100% !important;
+}
+
+}
+
+
+
+
+  
+
