@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import emailjs from "@emailjs/browser";
 import "./Reservation.css";
 import "./Style.css";
 import "./About.css";
@@ -22,60 +23,89 @@ export default function Reservation() {
     setTimeSlot("");
   }, [timeGroup]);
 
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const form = e.target;
 
-    const form = e.target;
-
-    if (!form.checkValidity()) {
-      form.reportValidity();
-      return;
-    }
-
-    if (!timeSlot) {
-      setStatusMessage("Please select a preferred time.");
-      return;
-    }
-
-    setStatusMessage("Submitting...");
-
-
-const formData = new FormData(form);
-
-// FORCE all values properly
-formData.set("time_group", timeGroup || "");
-formData.set("time_slot", timeSlot || "");
-
-// DEBUG (keep for now)
-for (let [key, value] of formData.entries()) {
-  console.log("SEND:", key, value);
-}
-
-    try {
-      const res = await fetch(
-  "https://formsubmit.co/ajax/vanshikawork.0070@gmail.com",
-  {
-    method: "POST",
-    body: formData
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    return;
   }
-);
 
-      if (res.ok) {
-        setStatusMessage("We look forward to welcoming you soon.");
+  if (!timeSlot) {
+    setStatusMessage("Please select a preferred time.");
+    return;
+  }
 
-        form.reset();
-setTimeGroup("");
-setTimeSlot("");
-setStatusMessage("We look forward to welcoming you soon.");
+  setStatusMessage("Submitting...");
 
-      } else {
-        setStatusMessage("Submission failed.");
-      }
-    } catch (err) {
-      setStatusMessage("Network error.");
-    }
+  const formData = new FormData(form);
+
+  // Restaurant email
+  const restaurantParams = {
+    name: formData.get("name"),
+    email: formData.get("email"),
+    date: formData.get("date"),
+    guests: formData.get("guests"),
+    time_group: formData.get("time_group"),
+    time_slot: timeSlot,
+    dining: formData.get("dining"),
+    message: formData.get("message") || "None",
   };
+
+  // Customer confirmation
+  const customerParams = {
+    name: formData.get("name"),
+    to_email: formData.get("email"),
+    email: formData.get("email"), // Used for Reply-To
+    date: formData.get("date"),
+    guests: formData.get("guests"),
+    time_slot: timeSlot,
+    dining: formData.get("dining"),
+    message: formData.get("message") || "None",
+  };
+
+  try {
+    // Send to restaurant
+    await emailjs.send(
+      "service_kawpvb5",
+      "template_wp81947",
+      restaurantParams,
+      "LeBZOEXlDCUclDB-v"
+    );
+
+    console.log("✅ Restaurant email sent");
+
+    // Send confirmation to customer
+    await emailjs.send(
+      "service_kawpvb5",
+      "template_7btgc55",
+      customerParams,
+      "LeBZOEXlDCUclDB-v"
+    );
+
+    console.log("✅ Customer confirmation sent");
+
+    form.reset();
+    setTimeGroup("");
+    setTimeSlot("");
+
+    setStatusMessage(
+      "🎉 Reservation received successfully! Please check your email for your confirmation."
+    );
+
+  } catch (err) {
+    console.error("❌ Email sending failed:", err);
+
+    setStatusMessage(
+      "Something went wrong. Please call us directly to complete your reservation."
+    );
+  }
+};
+
+
+
 
   return (
     <section className="about">
@@ -116,15 +146,9 @@ setStatusMessage("We look forward to welcoming you soon.");
           </h3>
 
           <form id="bookingForm" onSubmit={handleSubmit}>
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_template" value="table" />
-            <input
-              type="hidden"
-              name="_subject"
-              value="New Table Booking Request"
-            />
 
-            {/* NAME + PHONE */}
+
+            {/* NAME + EMAIL */}
 
             <div className="two-column">
               <div className="form-group">
@@ -143,19 +167,18 @@ setStatusMessage("We look forward to welcoming you soon.");
               </div>
 
               <div className="form-group">
-                <label>Phone</label>
+  <label>Email</label>
 
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  className="form-input"
-                  required
-                  placeholder="Enter Phone Number"
-                  pattern="^[0-9]{10}$"
-                  autoComplete="off"
-                />
-              </div>
+  <input
+    type="email"
+    id="email"
+    name="email"
+    className="form-input"
+    required
+    placeholder="Enter Email Address"
+    autoComplete="email"
+  />
+</div>
             </div>
 
             {/* DATE + GUESTS */}
