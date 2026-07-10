@@ -54,12 +54,12 @@ function AboutJob() {
     <div className="tools-list">
       <span className="tool">Frontend Development</span> 
       <span className="tool">UI/UX Design</span>  
-      <span className="tool">Responsive Web Design</span>
       <span className="tool">SEO-Friendly Websites</span>
-      <span className="tool">Landing Page Development</span>     
-      <span className="tool">Cross-Browser Compatibility</span>
+      <span className="tool">Responsive Web Design</span>
+      <span className="tool">Landing Page Development</span>
       <span className="tool">Component-Based Development</span>
       <span className="tool">Website Performance Optimization</span>
+      <span className="tool">Cross-Browser Compatibility</span>
     </div>
   </div>
 
