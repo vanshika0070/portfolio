@@ -6,41 +6,48 @@ header {
   left: 0;
   width: 100%;
   z-index: 99;
-  padding: 50px;
+  padding: 30px;
 }
 
 #navbar {
   display: flex;
-  align-items: center;
-  justify-content: center;
-    border:1px solid var(--border);
-  gap: 28px; /* spacing between logo, menu, button */
-  width: fit-content;
-  max-width: 100%;
-  padding: 8px 18px;
-  border-radius:10px;
-  background: var(--black);
+  gap: 28px;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 50%;
+  padding: 8px 30px;
+  border-radius: 40px;
+  border: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.8); /* or your var(--header-bg) with transparency */
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
 }
 
-.nav-logo{
-    font-family:'Monsterrat',serif;
-  font-size: 30px;
-  font-weight: bold;
-  width: auto;
-  align-items: center;
-  justify-content: center;
-  text-align: start;
+.nav-left {
   display: flex;
+  align-items: center;
+  gap: 18px;
 }
 
-.nav-logo:hover{
-color:var(--text-hover) !important;
+.nav-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo {
+  width: 40px;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 20px;   /* FIX: smaller gap */
+  gap: 40px;   /* FIX: smaller gap */
   list-style: none;
   margin: 0;
   padding: 0;
@@ -52,7 +59,13 @@ color:var(--text-hover) !important;
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
+  font-size: 0.9rem;
   transition: color 0.3s ease;
+  color:var(--text) !important;
+}
+
+.nav-links a:hover {
+  color:var(--white) !important;
 }
 
 .nav-toggler {
@@ -66,6 +79,7 @@ color:var(--text-hover) !important;
   border: none;
   cursor: pointer;
   padding: 4px;
+  display: none;
 }
 
 .nav-toggler span {
@@ -175,28 +189,59 @@ color:var(--text-hover) !important;
 
 
 
-@media (max-width: 756px) {
+@media(max-width:757px){
 
   header{
     padding:15px;
   }
 
-  #navbar {
-    justify-content: space-between; /* keeps structure clean */
-    width: 100%;
-    padding:7px 10px;
-  }
-
-  .nav-logo{
-    font-family:'Monsterrat',serif;
-  font-size: 25px;
-  font-weight: bold;
-  width: auto;
-  align-items: center;
-  justify-content: center;
-  text-align: start;
-  display: flex;
+#navbar {
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+  padding:7px 10px;
+  border-radius: 40px;
+  border: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.8); /* or your var(--header-bg) with transparency */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
+  
+.nav-left {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  order: 1;
+}
+
+.logo {
+  width: 35px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.nav-toggler {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 34px;
+  height: 34px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+
+  order: 2;
+  margin-left: auto; /* Pushes it to the extreme right */
+}
+
 
 
   .nav-links {
@@ -221,22 +266,42 @@ color:var(--text-hover) !important;
 
 
 
-@media (max-width: 1199px) and (min-width:757px){
+@media(max-width:1199px) and (min-width:758px){
   header {
   padding: 30px;
 }
 
 #navbar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-    border:1px solid var(--border);
+  justify-content:space-between;
+  border:1px solid var(--border);
   gap: 28px; /* spacing between logo, menu, button */
-  width: fit-content;
+  width: 100%;
   max-width: 100%;
-  padding: 4px 16px;
-  border-radius:10px;
+  padding: 10px 17px;
+  border-radius:40px;
   background: var(--black);
+}
+
+.logo {
+  width: 45px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+
+.nav-toggler {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 34px;
+  height: 34px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: none;
 }
 
  .modal-nav-links a:hover {

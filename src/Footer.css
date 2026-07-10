@@ -1,0 +1,131 @@
+.footer{
+        border-top: 1px solid var(--border);
+    padding:70px ;
+}
+
+.footer-content{
+    display:flex;
+      width: min(1200px, 100%);
+      margin: auto;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:60px;
+}
+
+.footer-left{
+    display:flex;
+    flex-direction:column;
+    gap:70px;
+}
+
+.footer-logo img{
+    width:52px;
+    height:52px;
+    border-radius:50%;
+}
+
+.footer-left p{
+    color:var(--text);
+    font-size:1rem;
+    margin:0;
+}
+
+.footer-right{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:70px;
+}
+
+.social-icons{
+    display:flex;
+    gap:28px;
+}
+
+.social-icons a{
+    color:var(--white);
+    font-size:1.4rem;
+    transition:.3s ease;
+}
+
+.social-icons a:hover{
+    color:var(--text);
+    transform:translateY(-3px);
+}
+
+.footer-bottom{
+    display:flex;
+    gap:35px;
+    align-items:center;
+}
+
+.footer-bottom span{
+    color:var(--text);
+    font-size:1rem;
+}
+
+.footer-bottom strong{
+    color:var(--white);
+    font-weight:600;
+}
+
+
+@media(max-width:757px){
+
+    .footer{
+        padding:40px 20px;
+    }
+
+    .footer-content{
+        flex-direction:column;
+        gap:30px;
+    }
+
+    /* First row */
+    .footer-left{
+        width:100%;
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:center;
+        gap:20px;
+    }
+
+    .footer-logo img{
+        width:48px;
+        height:48px;
+    }
+
+    .footer-left p{
+        display:none;   /* Move ©2025 below */
+    }
+
+    .footer-right{
+        width:100%;
+        align-items:flex-start;
+        gap:20px;
+    }
+
+    .social-icons{
+        gap:24px;
+    }
+
+    .social-icons a{
+        font-size:1.3rem;
+    }
+
+    .footer-bottom{
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:14px;
+    }
+
+    .footer-bottom::after{
+        content:"© 2025";
+        color:var(--text);
+        font-size:1rem;
+    }
+
+}

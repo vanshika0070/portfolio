@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Style.css";
 import "./Header.css";
+import { Link } from "react-router-dom";
 import Modal from "./Modal";
 
 function Header() {
@@ -10,40 +11,36 @@ function Header() {
     <header>
       <nav id="navbar">
         {/* LEFT SIDE */}
-        <div style={{ display: "flex", alignItems: "center", gap: "18px" }}>
-          
-          <button
-            className={`nav-toggler ${isModalOpen ? "open" : ""}`}
-            aria-label="Open navigation"
-            aria-expanded={isModalOpen}
-            onClick={() => setIsModalOpen(!isModalOpen)}
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
+       <div className="nav-left">
+  <button
+    className={`nav-toggler ${isModalOpen ? "open" : ""}`}
+    aria-label="Open navigation"
+    aria-expanded={isModalOpen}
+    onClick={() => setIsModalOpen(!isModalOpen)}
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 
-          <a href="/" className="nav-logo">
-            LAZEEZ
-          </a>
-        </div>
+  <a href="/" className="nav-logo">
+    <img src="/images/logo.webp" alt="Lazeez Logo" className="logo" />
+  </a>
+</div>
 
         {/* CENTER LINKS */}
         <ul className="nav-links">
           <li>
-            <a href="/menu">Specials</a>
+            <Link to="/#why-me">Why Me?</Link>
           </li>
           <li>
-            <a href="/about">About</a>
+            <Link to="/#featured-work">Featured Work</Link>
+          </li>
+           <li>
+            <Link to="/#about">About</Link>
           </li>
         </ul>
 
-        {/* RIGHT BUTTON */}
-        <div>
-          <a href="/reservation" className="btn">
-            Reserve Table
-          </a>
-        </div>
       </nav>
 
       <Modal

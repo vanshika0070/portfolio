@@ -1,236 +1,178 @@
-
-.banner{
-  height:100vh;
-  padding:6px;
-  display:grid;
-  grid-template-columns:1fr 450px;
-  gap:7px;
+.hero{
+    padding: 40px 20px;
 }
 
-    .hero {
-      position: relative;
-      display: flex;
-      height: 100vh;
-      align-items: center;
-    }
+/* ================= TITLE ================= */
 
-.hero-cell{
-  position:relative;
-  border-radius:14px;
-  overflow:hidden;
+.hero-title{
+    margin-top: 10px;
 }
 
-.hero-overlay{
-  position: absolute;
-  inset: 0;
-  background:
-  linear-gradient(
-    to top,
-    rgba(0,0,0,0.72),
-    rgba(0,0,0,0.18)
-  );
+.hero-title h1{
+    font-size: 8rem;
+    font-weight: 800;
+    line-height: .82;
+    letter-spacing: -5px;
+    margin: 0;
 }
 
-    .hero-eyebrow {
-      font-size: 0.6rem;
-      letter-spacing: 5px;
-      text-transform: uppercase;
-      color: var(--text-highlight);
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .hero-eyebrow::before {
-      content: '';
-      width: 30px; height: 1px;
-      background: var(--text-highlight);
-      display: block;
-    }
-
-.hero-video{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-  transform:scale(1.03);
+.gray{
+    color: var(--text) !important;
 }
 
-.hero-content{
-  position:absolute;
-  z-index:2;
-  bottom:50px;
-  left:52px;
-  right:52px; 
-    max-width: 70%;
-}
+/* ================= INFO ================= */
 
-.right-col{
-  display:grid;
-  grid-template-rows:1fr 1fr 1fr;
-  gap:7px;
-}
-
-.panel{
-  position:relative;
-  border-radius:14px;
-  overflow:hidden;
-  cursor:pointer;
-}
-
-.panel img{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-  opacity:0.78;
-  transition:
-  opacity 0.5s ease,
-  transform 0.6s ease;
-}
-
-.panel:hover img{
-  opacity:0.95;
-  transform:scale(1.05);
-}
-
-.panel-label{
-  position:absolute;
-  z-index:2;
-  bottom:20px;
-  left:22px;
-  right:22px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-
-.panel-label span{
-  font-size:0.7rem;
-  letter-spacing:3.5px;
-  text-transform:uppercase;
-  font-weight:600;
-}
-
-
-
-
-@media (max-width: 756px) {
-
-
-   .banner{
-    height:auto;
-    min-height:100vh;
-    grid-template-columns:1fr;
-    grid-template-rows:70vh auto;
-    padding:4px;
-    gap:10px;
-  }
-
-  .hero-cell{
-    border-radius:10px;
-    min-height:60vh;
-  }
-
-  .hero-content{
-    bottom:30px;
-    left:24px;
-    right:24px;
-  }
-
-
-    .right-col{
-    grid-template-columns:1fr;
-    height:auto;
-  }
-
-  .panel{
-    border-radius:10px;
-    height: 400px;
-  }
-
-  .panel:hover img{
-  opacity:0.95;
-  transform:none;
-}
-
- .hero-content {
-        left: 20px;
-        right: 18px;
-        bottom: 20px;
-        max-width: 70%;
-      }
-
-      .hero-eyebrow { font-size: 0.55rem; }
-  
-   .about{
-    grid-template-columns:1fr;
-    height:auto;
-  }
-
-  .about-cell,
-  .about-col{
-    height:auto;
-  }
-
-  /* normal scrolling */
-  .about-cell{
-    min-height:70vh;
-    overflow:visible;
-  }
-
-  .about-cell img{
-    height:auto;
-    min-height:70vh;
-  }
-  
-   .excellence-grid{
-        grid-template-columns:1fr;
-    }
-
-    .excellence-card:hover{
-    transform:none;
-}
-
-.culinary-excellence .hcard-text{
-font-size: 17px;
-width:100%;
-}
-
-      .story-card{
-        grid-template-columns:1fr;
-      }
-
-      .feature-grid{
-        grid-template-columns:1fr 1fr;
-      }
-      
-  .story-content h3{
-    font-size:1.5rem;
-  }
-
-.bocks {
-  width: 100%;
-  padding: 10px;
-}
-
-#bookingForm{
-  padding:0;
-  margin:0;
-  width: 100%;
-  z-index: 9;
-}
-
- .two-column {
+.hero-info{
+    max-width: 360px;
+    margin-left: auto;
+    padding-right: 10px;
+    display: flex;
     flex-direction: column;
-    gap:0 !important;
-  }
+    gap: 10px;
+}
 
-  .about-col{
-    gap:1px;
-  }
+.tag{
+    font-size: 1.22rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.hero-info p{
+    margin: 0;
+    color: var(--text);
+    line-height: 1.5;
+     font-size: 0.95rem;
+}
+
+.hero-info ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hero-info li{
+    line-height: 1.4;
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+    color: var(--text);
+}
+
+.hero-info li:last-child{
+    margin-bottom: 0;
+}
+
+
+
+/* Hero Buttons */
+ .hero .buttons{
+    display:flex !important;
+    justify-content:flex-start !important;
+    align-items:flex-start !important;
+    gap:18px;
+    width:100%;
+}
+
+/* ================= BUTTONS ================= */
+
+
+.hero-image{
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 40px;
+    margin-top: 70px;
+}
+
+.image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .5s ease;
+}
+
+/* Zoom image */
+.hero-image:hover .image{
+    transform: scale(1.08);
+}
+
+
+
+
+
+/* ================= TABLET ================= */
+
+@media(max-width:1199px) and (min-width:758px){
+
+    .hero{
+        text-align:left;
+        line-height: 2;
+    }
+
+    .hero-title{
+        margin-top: 100px;
+    }
+
+    .hero-title h1{
+        font-size: 4.5rem;
+        letter-spacing: -3px;
+    }
+
+    .hero-info{
+        width:100%;
+        max-width:100%;
+        margin:40px 0 0;
+        padding:0;
+    }
+
+    .hero-image{
+        height: 450px;
+        margin-top: 50px;
+    }
+
+    .hero-image:hover .image{
+    transform: none;
+    }
+}
+
+/* ================= MOBILE ================= */
+
+
+
+@media(max-width:757px){
+
+    .hero{
+        padding:30px 10px;
+    }
+
+    .hero-title{
+        margin-top:50px;
+        width:100%;
+        text-align:left;
+    }
+
+    .hero-title h1{
+        font-size:2.7rem;
+        line-height:1;
+        letter-spacing:-2px;
+        text-align:left;
+    }
+
+    .hero-info{
+        width:100%;
+        max-width:100%;
+        margin:30px 0 0;
+        padding:0;
+    }
+
+    .hero-image{
+        height:300px;
+        margin-top:40px;
+        border-radius:24px;
+    }
+
+    .hero-image:hover .image{
+    transform: none;
+}
+
 }

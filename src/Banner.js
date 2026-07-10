@@ -1,92 +1,100 @@
+import { useRef } from "react";
+import { Link } from "react-router-dom";
 import "./Banner.css";
+import "./Style.css";
 
 function Banner() {
+  const buttonRef = useRef(null);
+
+  const handleMouseMove = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    if (buttonRef.current) {
+      buttonRef.current.style.left = `${x}px`;
+      buttonRef.current.style.top = `${y}px`;
+    }
+  };
+
   return (
-    <section className="banner" aria-label="Hero section">
+    <section className="hero">
+      <div className="container">
+        <div className="row align-items-center">
+          {/* Left Side */}
+          <div className="col-lg-8">
+            <div className="hero-title">
+              <h1>Websites</h1>
+              <h1>That</h1>
+              <h1 className="gray">Convert.</h1>
+            </div>
+          </div>
 
-      {/* LEFT: HERO PANEL */}
-      <div className="hero-cell">
+          {/* Right Side */}
+          <div className="col-lg-4">
+            <div className="hero-info">
+              <span className="tag">
+                FOR SMALL BUSINESSES & STARTUPS
+              </span>
 
-        <video
-          className="hero-video"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          poster="/images/hero-img.webp"
-          aria-hidden="true"
-        >
-          <source src="/videos/hero-video.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+              <p>
+                I design and develop fast, modern and responsive websites that
+                convert visitors into customers.
+              </p>
 
-        <div className="hero-overlay"></div>
+              <ul>
+                <li>✓ Responsive Design</li>
+                <li>✓ SEO Friendly</li>
+                <li>✓ Fast Loading</li>
+              </ul>
 
-        <div className="hero-content">
-          <p className="hero-eyebrow">
-            An experience of elegance, flavor, and tradition
-          </p>
+              <p>⭐ Trusted by 10+ clients | 15+ projects delivered</p>
 
-          <h1>
-            Timeless Taste.
-            <br />
-            Refined Experience.
-          </h1>
+              <div className="hero-buttons">
+                <div className="buttons">
+                  <div className="button-group">
+                    <Link to="/freelance" className="btn-white">
+                      Start a Project
+                    </Link>
+                    <small>For businesses & startups</small>
+                  </div>
 
-          <a href="/Menu" className="btn">
-            Discover Flavours
+                  <div className="button-group">
+                    <Link to="/hire" className="btn-dark">
+                      View Resume
+                    </Link>
+                    <small>For hiring & opportunities</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Hero Image */}
+        <div className="row">
+          <a href="/projectsall">
+              <div
+            className="hero-image"
+            onMouseMove={handleMouseMove}
+          >
+            <img
+              src="/images/banner.avif"
+              alt="Website Preview"
+              className="image"
+            />
+
+            <button
+              ref={buttonRef}
+              className="hover-btn"
+            >
+              View Project
+            </button>
+          </div>
           </a>
         </div>
       </div>
-
-      {/* RIGHT COLUMN */}
-      <div className="right-col">
-
-        {/* PANEL 1 */}
-        <a href="/menu" className="panel menu-panel">
-          <img
-            src="/images/menu.webp"
-            alt="Lazeez menu highlights"
-          />
-
-          <div className="panel-overlay"></div>
-
-          <div className="panel-label">
-            <span>Specials</span>
-          </div>
-        </a>
-
-        {/* PANEL 2 */}
-        <a href="/Reservation" className="panel reservation-panel">
-          <img
-            src="/images/reservation.webp"
-            alt="Dining experience at Lazeez"
-          />
-
-          <div className="panel-overlay"></div>
-
-          <div className="panel-label">
-            <span>Reservation</span>
-          </div>
-        </a>
-
-        {/* PANEL 3 */}
-        <a href="/About" className="panel ambiance-panel">
-          <img
-            src="/images/restaurant.webp"
-            alt="Lazeez restaurant ambiance"
-          />
-
-          <div className="panel-overlay"></div>
-
-          <div className="panel-label">
-            <span>Our Restaurant</span>
-          </div>
-        </a>
-
-      </div>
-
     </section>
   );
 }
