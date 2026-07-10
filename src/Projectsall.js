@@ -44,7 +44,7 @@ export const projectsall = [
   image: "/images/lazeez.avif",
   tags: ["React.js", "Frontend"],
   slug: "lazeez",
-  liveLink: "https://lazeez-restaurant-eight.vercel.app/",
+  liveLink: "https://lazeez-restaurant-lilac.vercel.app/",
   client: "Lazeez Restaurant",
   services: "React.js, Web Design, UI/UX Design, Frontend Development",
 

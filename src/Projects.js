@@ -19,7 +19,7 @@ const projects = [
     image: "/images/lazeez.avif",
     tags: ["React.js", "Frontend"],
    slug: "lazeez",
-    liveLink: "https://lazeez-restaurant-eight.vercel.app/",
+    liveLink: "https://lazeez-restaurant-lilac.vercel.app/",
   },
 ];
 
