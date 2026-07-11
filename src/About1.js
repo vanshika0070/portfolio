@@ -62,7 +62,7 @@ function About1() {
             </p>
 
             <div className="btn-direction align-content-start">
-                    <Link to="/AllBoutMe" className="btn-white">
+                   <Link to="/allboutme" className="btn-white">
                      Learn more about me
                     </Link>
             </div>

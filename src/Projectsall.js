@@ -153,8 +153,8 @@ function Projectsall() {
           <div className="projects-grid">
             {projectsall.map((project) => (
               <div className="project-column" key={project.id}>
-              <Link
-  to={`/${project.slug}`}
+             <Link
+  to={`/projects/${project.slug}`}
   state={{ from: "projectsall" }}
   className="project-card">
                   <div className="project-image">

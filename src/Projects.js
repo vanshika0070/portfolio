@@ -41,7 +41,7 @@ function Projects({ from = "home" })  {
           {projects.map((project) => (
             <div className="project-column" key={project.id}>
               <Link
-  to={`/${project.slug}`}
+  to={`/projects/${project.slug}`}
   state={{ from }}
   className="project-card"
 >

@@ -10,6 +10,7 @@ import ProjectDetails from "./ProjectDetails"; // <-- Import this
 import AllBoutMe from "./AllBoutMe";
 import Freelance from "./Freelance";
 import Hire from "./Hire";
+import Error404 from "./Error404";
 
 function App() {
   return (
@@ -23,11 +24,14 @@ function App() {
         <Route path="/projectsall" element={<Projectsall />} />
 
         {/* Dynamic slug route */}
-        <Route path="/:slug" element={<ProjectDetails />} />
+        <Route path="/projects/:slug" element={<ProjectDetails />} />
 
         <Route path="/allboutme" element={<AllBoutMe />} />
         <Route path="/freelance" element={<Freelance />} />
         <Route path="/hire" element={<Hire />} />
+        
+         {/* Always last */}
+        <Route path="*" element={<Error404 />} />
       </Routes>
 
       <Footer />
