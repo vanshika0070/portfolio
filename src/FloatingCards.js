@@ -2,8 +2,8 @@ import "./Banner.css";
 import "./Style.css";
 
 const cards = [
-  "⚡ Fast Loading",
-  "🔍 SEO Optimized",
+  "⚡ Fast Performance",
+  "📱 Responsive Design",
   "🎨 Modern UI/UX",
 ];
 

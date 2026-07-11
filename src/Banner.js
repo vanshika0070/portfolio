@@ -22,65 +22,61 @@ function Banner() {
   return (
     <section className="hero">
       <div className="container">
-        <div className="row align-items-center">
-          {/* Left Side */}
-          <div className="col-lg-8">
-  <div className="hero-title">
-    <h1>Websites</h1>
-    <h1>That</h1>
-    <h1 className="gray">Convert.</h1>
 
-    <p>
-      Fast, responsive websites with modern frontend technologies.
-    </p>
+        {/* Hero Heading */}
+        <div className="hero-title">
+          <h1>Websites</h1>
+          <h1>That</h1>
+          <h1 className="gray">Convert.</h1>
 
-    <FloatingCards />
-  </div>
-</div>
+          <p>
+            Fast, responsive websites with modern frontend technologies.
+          </p>
+        </div>
 
-          {/* Right Side */}
-          <div className="col-lg-4">
-            <div className="hero-info">
-              <span className="tag">
+        {/* Cards + Info */}
+        <div className="hero-bottom">
+
+          <FloatingCards />
+
+          <div className="hero-info">
+            <span className="tag">
               Frontend & Web Designer
-              </span>
+            </span>
 
-              <p>I build fast, responsive websites that combine modern design, clean code, and exceptional user experience.</p>
+            <p>
+              I build fast, responsive websites that combine modern design,
+              clean code, and exceptional user experience.
+            </p>
 
-              {/* <ul>
-                <li>✓ Responsive Design</li>
-                <li>✓ Performance Focused</li>
-                <li>✓ Modern UI/UX</li>
-                <li>✓ Clean & Maintainable Code</li>
-              </ul> */}
+            <p>⭐ 2+ years experience • 10+ websites delivered</p>
 
-              <div className="hero-buttons">
-                <div className="buttons">
-                  <div className="button-group">
-                    <Link to="/freelance" className="btn-white">
-                      Start a Project
-                    </Link>
-                    <small>For businesses & startups</small>
-                  </div>
+            <div className="hero-buttons">
+              <div className="buttons">
 
-                  <div className="button-group">
-                    <Link to="/hire" className="btn-dark">
-                      View Resume
-                    </Link>
-                    <small>For hiring & opportunities</small>
-                  </div>
+                <div className="button-group">
+                  <Link to="/freelance" className="btn-white">
+                    Start a Project
+                  </Link>
+                  <small>For businesses & startups</small>
                 </div>
+
+                <div className="button-group">
+                  <Link to="/hire" className="btn-dark">
+                    View Resume
+                  </Link>
+                  <small>For hiring & opportunities</small>
+                </div>
+
               </div>
             </div>
           </div>
+
         </div>
 
-        
-
         {/* Hero Image */}
-        <div className="row">
-          <a href="/projectsall">
-              <div
+        <a href="/projectsall">
+          <div
             className="hero-image"
             onMouseMove={handleMouseMove}
           >
@@ -97,8 +93,8 @@ function Banner() {
               View Project
             </button>
           </div>
-          </a>
-        </div>
+        </a>
+
       </div>
     </section>
   );
