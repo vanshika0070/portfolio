@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { Link } from "react-router-dom";
 import "./Banner.css";
 import "./Style.css";
+import FloatingCards from "./FloatingCards";
 
 function Banner() {
   const buttonRef = useRef(null);
@@ -24,32 +25,34 @@ function Banner() {
         <div className="row align-items-center">
           {/* Left Side */}
           <div className="col-lg-8">
-            <div className="hero-title">
-              <h1>Websites</h1>
-              <h1>That</h1>
-              <h1 className="gray">Convert.</h1>
-              <p>
-Fast, responsive websites designed to
-help businesses grow online.</p>
-            </div>
-          </div>
+  <div className="hero-title">
+    <h1>Websites</h1>
+    <h1>That</h1>
+    <h1 className="gray">Convert.</h1>
+
+    <p>
+      Fast, responsive websites with modern frontend technologies.
+    </p>
+
+    <FloatingCards />
+  </div>
+</div>
 
           {/* Right Side */}
           <div className="col-lg-4">
             <div className="hero-info">
               <span className="tag">
-                FOR SMALL BUSINESSES & STARTUPS
+              Frontend & Web Designer
               </span>
 
-              <p>I build high-performance websites that are fast, responsive, and designed to grow your business.</p>
+              <p>I build fast, responsive websites that combine modern design, clean code, and exceptional user experience.</p>
 
-              <ul>
+              {/* <ul>
                 <li>✓ Responsive Design</li>
-                <li>✓ SEO Friendly</li>
-                <li>✓ Fast Loading</li>
-              </ul>
-
-              <p>⭐ Trusted by 5+ clients | 10+ projects delivered</p>
+                <li>✓ Performance Focused</li>
+                <li>✓ Modern UI/UX</li>
+                <li>✓ Clean & Maintainable Code</li>
+              </ul> */}
 
               <div className="hero-buttons">
                 <div className="buttons">
@@ -71,6 +74,8 @@ help businesses grow online.</p>
             </div>
           </div>
         </div>
+
+        
 
         {/* Hero Image */}
         <div className="row">

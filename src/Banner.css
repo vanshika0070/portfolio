@@ -35,6 +35,7 @@
     font-size: 1.22rem;
     font-weight: 700;
     margin: 0;
+  text-transform: uppercase;
 }
 
 .hero-info p{
@@ -175,4 +176,82 @@
     transform: none;
 }
 
+}
+
+
+
+
+
+
+
+
+
+
+
+.floating-cards{
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+    margin-top:28px;
+    max-width:650px;
+}
+
+.floating-card{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:12px 20px;
+    border-radius:14px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    font-size:.92rem;
+    font-weight:500;
+    box-shadow:0 10px 30px rgba(255,255,255,.04);
+    backdrop-filter:blur(12px);
+    animation:float 7s ease-in-out infinite;
+}
+
+
+
+.floating-card{
+    will-change: transform;
+}
+
+.card-1{
+    animation: float1 6s ease-in-out infinite;
+}
+
+.card-2{
+    animation: float2 7s ease-in-out infinite;
+}
+
+.card-3{
+    animation: float3 6.5s ease-in-out infinite;
+}
+
+@keyframes float1{
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes float2{
+    0%,100%{
+        transform: translateY(-2px);
+    }
+    50%{
+        transform: translateY(6px);
+    }
+}
+
+@keyframes float3{
+    0%,100%{
+        transform: translateY(2px);
+    }
+    50%{
+        transform: translateY(-7px);
+    }
 }

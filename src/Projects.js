@@ -57,7 +57,7 @@ function Projects({ from = "home" })  {
                     type="button"
                     className="hover-btn"
                   >
-                    View Project
+                    Case Study
                   </button>
                 </div>
 

@@ -168,7 +168,7 @@ function Projectsall() {
                       type="button"
                       className="hover-btn"
                     >
-                      View Project
+                     Case Study
                     </button>
                   </div>
 
