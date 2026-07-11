@@ -28,10 +28,10 @@ function Projects({ from = "home" })  {
     <section className="projects" id="featured-work">
       <div className="container">
         <div className="section-heading">
-          <span className="badge">⦿ My Projects</span>
+          <span className="badge">⦿ Featured Work</span>
 
           <h2>
-            Websites Built to <span>Convert</span>
+           Design That <span>Performs</span>
           </h2>
 
           <p>Real websites designed &amp; built for clients</p>

@@ -10,14 +10,12 @@ function AboutJob() {
         <div className="section-heading">
 
           <span className="badge">
-            ⦿ Expert Designer
+            ⦿ Built for Impact
           </span>
 
-          <h2>Profile</h2>
+          <h2><span>What I Bring </span>to the Table</h2>
 
-          <p>
-            Creating Digital Experiences with Purpose and Precision
-          </p>
+          <p>Skills and tools — the essentials, at a glance.</p>
 
         </div>
 
@@ -31,15 +29,15 @@ function AboutJob() {
               Hi, I'm <span>Vanshika Manav</span>
             </h3>
 
-            <p cl>Web designer and developer focused on building modern, responsive websites with strong attention to usability, performance, and clean design.</p>
+            <p>Web designer and developer focused on building modern, responsive websites with strong attention to usability, performance, and clean design.</p>
 
-            <p>Experienced in both design and development, with the ability to take projects from concept to launch. Comfortable working independently or within a team, with a focus on clear communication and delivering reliable, high-quality work.</p>
+            <p>Comfortable working independently or within a team, with clear communication and a focus on delivering reliable, high-quality work — every time.</p>
 
                 <hr />
 
                  <div className="btn-direction">
          <a href="#featured-work"  className="btn-white">
-            View Portfolio
+            View My Work
           </a>
         </div>
 

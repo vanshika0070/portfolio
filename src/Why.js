@@ -12,13 +12,11 @@ function Why() {
           </span>
 
           <h2>
-           Why Work With Me as
-            <br />
-            your <span>Design Partner</span>
+          Why Clients Keep <span> Coming Back</span>
           </h2>
 
           <p>
-            Why Partner with Me for the Design Excellence
+           Clarity, speed, and design that performs.
           </p>
 
         </div>

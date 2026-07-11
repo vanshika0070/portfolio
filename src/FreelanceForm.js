@@ -11,7 +11,7 @@ function FreelanceForm() {
       <div className="container">
 
         <div className="section-heading">
-          <span className="badge">⦿ Let's Connect</span>
+          <span className="badge">⦿ Ready When You Are</span>
 
           <h2>
             Start Your <span>Project</span>

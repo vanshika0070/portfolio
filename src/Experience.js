@@ -31,7 +31,7 @@ function AllBoutMe() {
 
             <ul>
                 <li>⚡Focused on UI/UX design using Figma and Framer.</li>
-                <li>⚡Built responsive websites and modern user interfaces with React.</li>
+                <li>⚡Built responsive websites and modern user interfaces with React.js</li>
                 <li>⚡Enhanced website usability, accessibility, and performance.</li>
                 <li>⚡Currently exploring Generative AI for UI/UX design workflows.</li>
             </ul>

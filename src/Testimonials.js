@@ -32,10 +32,10 @@ function Testimonials() {
     <section className="testimonials">
       <div className="container">
         <div className="section-heading">
-          <span className="badge">⦿ Testimonials</span>
+          <span className="badge">⦿ Client Results</span>
 
           <h2>
-            What My <span>Clients Say</span>
+            Hear It From <span>Them</span>
           </h2>
 
           <p>

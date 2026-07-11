@@ -149,7 +149,7 @@ const onSubmit = async (event) => {
           name="message"
           rows="5"
           className="form-textarea"
-          placeholder="Tell me about your project, goals, timeline, or any specific requirements..."
+          placeholder="What are you building? Share the goals and timeline..."
         />
       </div>
 

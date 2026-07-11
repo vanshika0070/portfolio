@@ -17,7 +17,7 @@ function Freelance() {
   <span className="separator">/</span>
 
   <span className="current">
-    Get In Touch
+   Careers
   </span>
 </div>
 

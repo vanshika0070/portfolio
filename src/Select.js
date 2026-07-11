@@ -10,7 +10,7 @@ function Why() {
 
         <div className="section-heading">
           <h2>
-           What are you  <span>looking for? </span>
+          Choose Your <span>Path</span>
           </h2>
 
         </div>

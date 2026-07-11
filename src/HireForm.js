@@ -120,7 +120,7 @@ export default function HireForm() {
           name="message"
           rows="5"
           className="form-textarea"
-          placeholder="Tell me about your project, goals, timeline, or any specific requirements..."
+          placeholder="Tell me about the opportunity..."
         />
       </div>
 

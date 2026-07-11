@@ -25,15 +25,10 @@ function AllBoutMe() {
               ⦿ Expert Designer
             </span>
 
-            <h2>
-              Meet the Designer <span>Behind</span>
-              <br />
-              <span>the Work</span>
-            </h2>
+             <h2>More Than Just <span>Code</span></h2>
 
-            <p>
-              Creating Digital Experiences with Purpose and Precision
-            </p>
+          <p>The person, the process, and the thinking behind every project.</p>
+
           </div>
 
           <div className="about-grid">
