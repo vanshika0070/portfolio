@@ -205,7 +205,7 @@
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    background: var(--card-bg);
+    background: var(--btn-bg);
     border: 3px solid var(--border);
   }
 

@@ -80,17 +80,17 @@ export const projectsall = [
   goal: {
     title: "The Goal",
     text: "The goal was to redesign and enhance the dART Creatives website to create a more modern, professional, and engaging online presence. The focus was on improving content clarity, showcasing services effectively, and making it easier for potential clients to explore and connect with the agency.",
-    image: "/images/dart.goal.png",
+    image: "/images/dart.goal.webp",
   },
   challenge: {
     title: "The Challenge",
     text: "The existing website had multiple services and content sections but lacked clear structure and consistency. Presenting all the information without overwhelming users was a key challenge. Additionally, working within WordPress while customizing layouts, integrating plugins, and maintaining performance required careful planning and execution.",
-    image: "/images/dart.challenge.png",
+    image: "/images/dart.challenge.webp",
   },
   result: {
     title: "The Result",
     text: "The final result is a modern, interactive, and professional website that better represents the agency’s brand. Improved content structure, updated messaging, and engaging animations create a smoother and more user-friendly experience. The website now feels more polished, easier to navigate, and more effective in communicating services to potential clients.",
-    image: "/images/dart.result.png",
+    image: "/images/dart.result.webp",
   },
 },
   {

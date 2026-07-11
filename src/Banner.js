@@ -28,6 +28,9 @@ function Banner() {
               <h1>Websites</h1>
               <h1>That</h1>
               <h1 className="gray">Convert.</h1>
+              <p>
+Fast, responsive websites designed to
+help businesses grow online.</p>
             </div>
           </div>
 
@@ -38,10 +41,7 @@ function Banner() {
                 FOR SMALL BUSINESSES & STARTUPS
               </span>
 
-              <p>
-                I design and develop fast, modern and responsive websites that
-                convert visitors into customers.
-              </p>
+              <p>I build high-performance websites that are fast, responsive, and designed to grow your business.</p>
 
               <ul>
                 <li>✓ Responsive Design</li>
@@ -49,7 +49,7 @@ function Banner() {
                 <li>✓ Fast Loading</li>
               </ul>
 
-              <p>⭐ Trusted by 10+ clients | 15+ projects delivered</p>
+              <p>⭐ Trusted by 5+ clients | 10+ projects delivered</p>
 
               <div className="hero-buttons">
                 <div className="buttons">

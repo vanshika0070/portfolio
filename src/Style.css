@@ -45,11 +45,12 @@ html{
 :root {
     --black: #000; 
     --border:#313131;
+    --border-h-btn:#c9c5c5; 
+    --text-h-btn:#292929;
     --border-h:#414040; 
     --header-bg:#141414;
     --btn-bgh:#181717;
     --btn-bg:#0f0f0f;
-    --card-bg:#070707;
     --text:#c2bfbf;
     --text-h:#929292;
     --white:#fff;
@@ -119,9 +120,9 @@ section{
  .btn-dark {
   display: inline-block;
   padding: 15px 30px;
-  border:1px solid var(--border);
+  border:1px solid var(--border-h-btn);
   border-radius: 30px;
-   background: var(--btn-bg) !important;
+   background: var(--text-h-btn) !important;
   color: var(--white);
   text-decoration: none;
   letter-spacing: 1px;
@@ -134,8 +135,8 @@ section{
 }
 
 .btn-dark:hover {
-  background: var(--black) !important;
-  border:1px solid var(--border-h);
+  background: var(--card-bg) !important;
+  border:1px solid var(--border-h-btn);
 }
 
 /* ////// */
