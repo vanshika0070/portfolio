@@ -86,7 +86,7 @@ header {
   display: block;
   width: 100%;
   height: 1.5px;
-  background: var(--text-hover);
+  background: var(--white);
   border-radius: 2px;
   transition:
     transform 0.4s cubic-bezier(0.23,1,0.32,1),
@@ -106,81 +106,83 @@ header {
   transform: translateY(-6.5px) rotate(-45deg);
 }
 
-#navModal {
+
+
+/* ///////////// OFFCANVAS (replaces modal) ///////////// */
+
+.offcanvas-overlay {
   position: fixed;
   inset: 0;
-  z-index: 999 !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  z-index: 998;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
   pointer-events: none;
-  transition: background 0.5s ease;
+  transition: opacity 0.4s ease;
 }
 
-#navModal.active {
+.offcanvas-overlay.active {
+  opacity: 1;
   pointer-events: all;
-  padding:30px;
 }
 
-.modal-inner {
-  width: 100%;
-  height:100%;
+.offcanvas {
+  position: fixed;
+  top: 0;
+  left: 0;               /* was right: 0 */
+  height: 100%;
+  width: min(320px, 80vw);
+  z-index: 999;
+  background: var(--btn-bg);
+  border-right: 1px solid var(--border);  /* was border-left */
+  padding: 30px 24px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  opacity: 0;
-  justify-content: center;
-  transform: translateY(20px);
+  transform: translateX(-100%);  /* was translateX(100%) */
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-#navModal.active .modal-inner {
-  opacity: 1;
-  transform: translateY(0);
-  border-radius: 20px;
- background: var(--btn-bg);
- border: 1px solid var(--border);
+.offcanvas.active {
+  transform: translateX(0);
 }
 
-.modal-nav-links {
-  list-style: none;
-  text-align: center;
-  padding: 0;
+.offcanvas-close {
+  display: none;
 }
 
-.modal-nav-links li {
-  overflow: hidden;
-  margin-bottom: 6px;
+.offcanvas-links a {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text) !important;
+  padding: 10px 0;
 }
 
-.modal-nav-links a {
-  font-size: clamp(1rem, 5vw, 3rem);
-  font-weight: 700;
-    text-transform: uppercase;
-  line-height: 1.5;
-  transform: translateY(110%);
-  transition:
-    transform 0.55s cubic-bezier(0.23,1,0.32,1),
-    color 0.3s,
-    letter-spacing 0.35s;
+ .offcanvas-links a:hover{
+  color: var(--white) !important;
 }
 
-.modal-nav-links a:hover {
-  letter-spacing: 3px;
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 40px;
 }
 
-
-
-.modal-nav-links a {
-  transform: translateY(110%);
+.inner h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--white);
 }
 
-
-#navModal.active .modal-nav-links a {
-  transform: translateY(0);
+.inner h4 {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text);
 }
-
-
-
 
 
 /* ////////////////////////////////// */
@@ -242,8 +244,6 @@ header {
   margin-left: auto; /* Pushes it to the extreme right */
 }
 
-
-
   .nav-links {
     display: none;
   }
@@ -251,10 +251,6 @@ header {
    .btn {
   padding: 10px 12px;
   font-size: 0.7rem;
-}
-
-.modal-nav-links a:hover {
-  letter-spacing: normal;
 }
 
 }
@@ -304,9 +300,19 @@ header {
   display: none;
 }
 
- .modal-nav-links a:hover {
-  letter-spacing: normal;
+  .nav-toggler {
+    display: flex;
+  }
 }
 
-}
+
+
+
+
+
+
+
+
+
+
 
