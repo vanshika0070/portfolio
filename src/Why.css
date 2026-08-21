@@ -6,7 +6,7 @@
 ========================================= */
 .why-grid {
   display: grid;
-  width: 1200px;
+    width: min(1200px, 100%);
   margin: auto;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
@@ -15,7 +15,7 @@
 
 .grid {
   display: grid;
-  width: 1200px;
+    width: min(1200px, 100%);
   margin: auto;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -183,14 +183,6 @@
   gap: 10px;
 }
 
-.why-card-large {
-  grid-column: span 1;
-}
-
-/* Last three cards = 2 columns each */
-.why-card-small {
-  grid-column: span 1;
-}
 
 .why-card:hover {
   transform: none;

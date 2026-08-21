@@ -5,7 +5,7 @@
 
 .footer-content{
     display:flex;
-      width: min(1200px, 100%);
+       width: min(1200px, 100%);
       margin: auto;
     justify-content:space-between;
     align-items:flex-start;

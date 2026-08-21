@@ -43,12 +43,8 @@ const Why = () => {
         {/* Cards */}
         <div className="grid">
           {reasons.map((reason, index) => (
-            <article
-              className={`why-card ${
-                index < 2 ? "why-card-large" : "why-card-small"
-              }`}
-              key={reason.number}
-            >
+             <article
+                className="why-card">
               <div className="why-card-top">
                 <span className="why-number">{reason.number}</span>
 
