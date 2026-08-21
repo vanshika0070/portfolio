@@ -348,6 +348,14 @@ width: 90%;
   width: 100%;
 }
 
+.tooltech {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  width: 100%;
+  margin: 0 0 15px !important;
+}
+
 .tools-box{
     width: 100%;
 }
