@@ -125,7 +125,7 @@ export default function Services() {
 
     <p>Final pricing depends on the number of pages, features, content, and timeline.</p>
 
-<a href="#freelanceform" className="btn-white">
+<a href="#contactfreelance" className="btn-white">
   Get a project estimate
 </a>
   

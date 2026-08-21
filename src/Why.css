@@ -178,6 +178,12 @@
 ========================================= */
 
 @media (max-width: 757px) {
+.grid {
+  display: grid;
+   width: 100%;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+}
 
 .why-grid {
   display: grid;

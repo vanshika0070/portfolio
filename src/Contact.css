@@ -333,7 +333,6 @@
 
 .submit-button:hover {
   background: var(--text-h) !important;
-  transform: translateY(-1px);
 }
 
 .submit-button span:last-child {
@@ -397,10 +396,14 @@
 }
 
 .qr-text {
-  color: #aaa;
+  color: var(--text);
   font-size: 13px;
   white-space: nowrap;
 }
+
+ .qr-text-mobile {
+    display: none !important;
+  }
 
 .whatsapp-button {
   justify-self: end;
@@ -409,7 +412,7 @@
   gap: 9px;
   padding: 14px 20px;
   border: 1px solid var(--border);
-  border-radius: 999px;
+  border-radius: 30px;
   background: #111;
   color: var(--white);
   text-decoration: none;
@@ -434,10 +437,6 @@
   font-size: 11px;
 }
 
-.reply{
-  text-align: center;
-}
-
 /* /////////////////// */
 
 
@@ -448,7 +447,9 @@
   gap: 16px;
 }
 
-.whatsapp-scan {
+
+
+.whatsapp-scan{
   width: 60%;
   margin: auto;
   display: block;
@@ -478,7 +479,7 @@
   margin: auto auto 0;
   padding: 14px 20px;
   border: 1px solid var(--border);
-  border-radius: 999px;
+  border-radius: 30px;
   background: #111;
   color: var(--white);
   text-decoration: none;
@@ -528,86 +529,125 @@
 
 @media (max-width: 757px) {
 
-  .hire-contact-section {
-    padding: 75px 18px 80px;
+.freelance-contact-grid {
+  display: grid;
+   width: 100%;
+ grid-template-columns: repeat(1, 1fr);
+  gap: 25px;
+}
+
+.hire-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 25px;
+   width: 100%;
+}
+
+ .two-column {
+    flex-direction: column;
+    gap:0 !important;
   }
 
-  .hire-contact-header {
-    margin-bottom: 35px;
-  }
+.form-group input,
+.form-group select {
+  width: 100%;
+  height:50px !important;
+  font-size: 0.93rem;
+}
 
-  .hire-contact-header h2 {
-    font-size: 42px;
-    letter-spacing: -2px;
-  }
+.form-group textarea{
+   width: 100%;
+  height:auto !important;
+  font-size: 0.93rem;
+}
 
-  .hire-contact-header p {
-    font-size: 15px;
-  }
+.resume-btn {
+  padding: 20px 13px;
+  width: 100%;
+}
 
-  .hire-about-card,
-  .hire-form-card {
-    padding: 24px 20px;
 
-    border-radius: 14px;
-  }
+.submit-button {
+  width: 100%;
+  padding: 11px 9px ;
+  font-size: 0.85rem;
+}
 
-  .hire-input-row {
-    grid-template-columns: 1fr;
-  }
-
-  .hire-input-row .hire-input + .hire-input {
-    margin-top: 16px;
-  }
-
-  .hire-whatsapp-card {
-    grid-template-columns: 1fr;
-
-    gap: 25px;
-
-    padding: 24px 20px;
-  }
-
-  .whatsapp-content {
-    align-items: flex-start;
-  }
+.whatsapp-card {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 25px;
+   width: 100%;
+}
 
   .whatsapp-qr-wrapper {
     justify-content: center;
     flex-direction: column;
   }
 
-  .scan-text {
-    white-space: normal;
+   .whatsapp-qr{
+  width: 50%;
+  height:auto;
+  margin: auto;
+  display: block;
+  padding: 5px;
+  background: var(--white);
+  border-radius: 8px;
+}
+
+  .qr-text {
+    display: none !important;
   }
 
-  .whatsapp-button {
-    width: 100%;
+  .qr-text-mobile {
+    display: block !important;
+    color: var(--text);
+    font-size: 13px;
+    white-space: nowrap;
+  }
 
+    .whatsapp-button {
+    width: 90%;
+margin: auto;
     justify-content: center;
-
+padding: 9px;
     justify-self: stretch;
   }
 
+
+  /* ////////////////////////////// */
+
+     .whatsapp-scan{
+  width: 50%;
+  height:auto;
+  margin: auto;
+  display: block;
+  padding: 5px;
+  background: var(--white);
+  border-radius: 8px;
+}
+
+  .whatsapp-btn {
+    width: 90%;
+margin: 30px auto 0;
+    justify-content: center;
+padding: 9px;
+    justify-self: stretch;
+  }
+
+.scan-text {
+    display: block !important;
+    color: var(--text);
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  s
   .whatsapp-response {
     grid-column: auto;
     justify-self: center;
     margin: -15px 0 0;
   }
-
-  .hire-card-heading h3 {
-    font-size: 18px;
-  }
-
-  .hire-role-tags {
-    line-height: 1.8;
-  }
- 
- .two-column {
-    flex-direction: column;
-    gap:0 !important;
-  }
-
 
 }
 

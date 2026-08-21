@@ -10,7 +10,7 @@ import { FaPen } from "react-icons/fa6";
 
 function ContactFreelance() {
    return (
-       <section className="ContactFreelance">
+       <section className="ContactFreelance" id="contactfreelance">
         <div className="container">
               <div className="section-heading">
                 <span className="badge">✦ Have something in mind?</span>
@@ -76,10 +76,6 @@ function ContactFreelance() {
             <span>·</span>
             <span>+91 9266 363466</span>
           </a>
-
-     <p className="reply">
-        Usually reply within few hours.
-      </p>
 
               </div>
             </div>

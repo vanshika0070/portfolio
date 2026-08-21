@@ -165,6 +165,9 @@ function HireContact() {
                 <span className="qr-text">
                     ← Scan to chat
                 </span>
+                <span className="qr-text-mobile">
+                     Scan to chat
+                </span>
             </div>
   
             <a
@@ -180,6 +183,7 @@ function HireContact() {
           </a>
   
         </div>
+        
           </div>
       </section>
     );
