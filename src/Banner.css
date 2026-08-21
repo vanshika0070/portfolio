@@ -89,9 +89,8 @@
 
 .hero-image{
     position: relative;
-    height: 600px;
+    height: 700px;
     overflow: hidden;
-    border-radius: 40px;
     margin-top: 70px;
 }
 
@@ -125,7 +124,7 @@
     align-items:center;
     gap:8px;
     padding:12px 20px;
-    border-radius:14px;
+    border-radius:7px;
     background:rgba(255,255,255,.05);
     border:1px solid rgba(255,255,255,.08);
     font-size:.92rem;

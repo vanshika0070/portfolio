@@ -9,10 +9,8 @@ function Why() {
       <div className="container">
 
         <div className="section-heading">
-          <h2>
-          Choose Your <span>Path</span>
-          </h2>
-
+          <h2>What brings <span>you here?</span></h2>
+          <p>Whether you're looking for someone to build your website or <br/>looking for a frontend designer to join your team, you're in the right place.</p>
         </div>
 
         <div className="why-buttons">
@@ -21,18 +19,18 @@ function Why() {
 
     <div className="buttons">
                   <div className="button-group">
-                    <Link to="/freelance" className="btn-white">
-                      Start a Project
-                    </Link>
-                    <small>For businesses & startups</small>
-                  </div>
+                  <Link to="/freelance" className="btn-white">
+                    Start a Project
+                  </Link>
+                  <small>Discuss your project</small>
+                </div>
 
-                  <div className="button-group">
-                    <Link to="/hire" className="btn-dark">
-                      View Resume
-                    </Link>
-                    <small>For hiring & opportunities</small>
-                  </div>
+                <div className="button-group">
+                  <Link to="/hire" className="btn-dark">
+                    View My Resume
+                  </Link>
+                  <small>See my Experience</small>
+                </div>
                 </div>
 
   </div>

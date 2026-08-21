@@ -26,13 +26,16 @@ Crafting modern, responsive web experiences.</h4>
 
         <ul className="offcanvas-links">
           <li>
-            <Link to="/#why-me" onClick={closeOffcanvas}>Why Me?</Link>
-          </li>
-          <li>
             <Link to="/#featured-work" onClick={closeOffcanvas}>Featured Work</Link>
-          </li>
+          </li>      
           <li>
             <Link to="/#about" onClick={closeOffcanvas}>About</Link>
+          </li>
+          <li>
+            <Link to="/freelance" onClick={closeOffcanvas}>Services</Link>
+          </li>
+          <li>
+            <Link to="/hire" onClick={closeOffcanvas}>Work With Me</Link>
           </li>
         </ul>
       </div>

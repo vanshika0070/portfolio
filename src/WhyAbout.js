@@ -3,45 +3,48 @@ import "./Why.css";
 const reasons = [
   {
     number: "01.",
-    title: "PURPOSEFUL DESIGN",
+    title: "CLEAR COMMUNICATION",
     description: [
-      "Design decisions are based on your business goals, not just what looks nice.",
+      "No guessing where your project stands.",
     ],
-    icon: "✦",
   },
   {
     number: "02.",
-    title: "DESIGN + DEVELOPMENT",
+    title: "THOUGHTFUL WORK",
     description: [
-      "From Figma to responsive websites, I can take your project from concept to implementation.",
+      "I care about the details, not just getting the page finished.",
     ],
-    icon: "</>",
   },
   {
     number: "03.",
-    title: "CLEAR COMMUNICATION",
+    title: "PRACTICAL DECISIONS",
     description: [
-      "Transparent updates, realistic timelines, and straightforward communication from start to finish.",
+      "Design choices are made around your needs and goals.",
     ],
-    icon: "•••",
   },
-
+    {
+    number: "04.",
+    title: "SMOOTH PROCESS",
+    description: [
+      "From first discussion to final delivery, everything stays organized.",
+    ],
+  },
 ];
 
 const Why = () => {
   return (
-    <section className="why">
+    <section className="why" >
       <div className="container">
          <div className="section-heading">
           <span className="badge">✦ Why choose me</span>
 
-          <h2>Built Around Your <span> Goals</span></h2>
+          <h2>What You Can <span>Expect</span></h2>
 
-          <p>Thoughtful design, strong development, and websites built around what you need.</p>
+          <p>A thoughtful approach, clear communication, and a process you can rely on.</p>
         </div>
 
         {/* Cards */}
-        <div className="grid">
+        <div className="why-grid">
           {reasons.map((reason, index) => (
             <article
               className={`why-card ${
@@ -51,10 +54,6 @@ const Why = () => {
             >
               <div className="why-card-top">
                 <span className="why-number">{reason.number}</span>
-
-                <div className="why-icon">
-                  {reason.icon}
-                </div>
               </div>
 
               <div className="why-card-content">

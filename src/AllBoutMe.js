@@ -1,291 +1,288 @@
 import "./Style.css";
 import "./About.css";
 import { Link } from "react-router-dom";
-import Why from "./Why";
-import Select from "./Select";
+import WhyAbout from "./WhyAbout";
+
+
+const personalStats = [
+  {
+    title: "Curious",
+    description: "Exploring new ideas and figuring out how things work.",
+  },
+  {
+    title: "Problem Solver",
+    description: "Turning messy problems into clear solutions.",
+  },
+  {
+    title: "Detail Oriented",
+    description: "Small details can make a big difference.",
+  },
+  {
+    title: "Collaborative",
+    description: "Good work usually comes from good communication.",
+  },
+];
+
+const approach = [
+  {
+    number: "01.",
+    title: "DISCOVER",
+    description: [
+      "We understand your goals, audience, content, and what the website needs to achieve.",
+    ],
+    icon: "✦",
+  },
+  {
+    number: "02.",
+    title: "DESIGN & BUILD",
+    description: [
+      "I turn the direction into a polished, responsive website.",
+    ],
+    icon: "</>",
+  },
+  {
+    number: "03.",
+    title: "LAUNCH",
+    description: [
+      "We refine the final details, make sure everything works, and get your website ready to go live.",
+    ],
+    icon: "•••",
+  },
+];
+
+const skills = [
+  {
+    number: "01.",
+    title: "FRONTEND DEVELOPMENT",
+    descriptions: [
+      "Responsive websites with clean, maintainable code.",
+    ],
+    icon: "✦",
+  },
+  {
+    number: "02.",
+    title: "UI/UX DESIGN",
+    descriptions: [
+      "Interfaces that are clean, intuitive, and visual design.",
+    ],
+    icon: "</>",
+  },
+  {
+    number: "03.",
+    title: "WEBSITE DESIGN",
+    descriptions: [
+      "Complete website designs built around your brand and goals.",
+    ],
+    icon: "•••",
+  },
+];
+
+const tools = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "WordPress",
+  "Figma",
+  "VS Code",
+  "Framer",
+];
 
 function AllBoutMe() {
   return (
     <>
+      {/* Breadcrumb */}
       <div className="breadcrumb">
         <Link to="/">Home</Link>
 
         <span className="separator">/</span>
 
-        <span className="current">
-          About Me
-        </span>
+        <span className="current">About Me</span>
       </div>
 
-      <section className="why" >
+      {/* About */}
+      <section className="about">
         <div className="container">
-
-          <div className="section-heading">
-            <span className="badge">
-              ⦿ Expert Designer
-            </span>
-
-             <h2>More Than Just <span>Code</span></h2>
-
-          <p>The person, the process, and the thinking behind every project.</p>
-
-          </div>
-
           <div className="about-grid">
 
-            {/* Left */}
+            {/* Image */}
             <div className="about-image-card">
               <img
                 src="/images/profile.webp"
                 alt="Vanshika Manav"
               />
+            </div>
 
-              <div className="availability">
-                <span className="dot"></span>
-                <span>Available for work</span>
+            {/* Content */}
+            <div className="about-content">
+              <div className="section-heading">
+                <span className="badge">✦ My Story</span>
+                <h2>Person behind the <span>Projects</span></h2>
+                <p>A little more about how I got here and what drives the way I work.</p>
+              </div>
+
+              <p>
+                My journey into web design and development started
+                with curiosity. I liked figuring out why some websites
+                felt easy to use while others didn't — and that
+                curiosity slowly turned into a passion for building
+                them myself.
+              </p>
+
+              <p>
+                Today, I work across design and frontend development,
+                with a focus on creating websites that are clear,
+                responsive, and enjoyable to use.
+              </p>
+
+              <div className="stat">
+                {personalStats.map((stat) => (
+                  <div className="stat-card" key={stat.title}>
+                    <h3>{stat.title}</h3>
+                    <p>{stat.description}</p>
+                  </div>
+                ))}
               </div>
             </div>
 
-            {/* Right */}
-            <div className="about-content">
-
-              <h3>
-                Hi, I'm <span>Vanshika Manav</span>
-              </h3>
-
-              <p className="subtitle">
-              a web designer and frontend developer focused on building modern, responsive websites for businesses and startups.
-              </p>
-
-              <hr />
-
-             <p className="description">I combine design and development to create websites that are clean, easy to use, and built with performance in mind. By handling both UI design and frontend development, I ensure consistency from concept to launch.</p>
-
-            </div>
-
           </div>
-
         </div>
-
-
-        <div className="stats">
-
-          <div className="stat-card">
-            <h3>2+</h3>
-            <p>Years of Experience</p>
-          </div>
-
-          <div className="stat-card">
-            <h3>5+</h3>
-            <p>Clients Served</p>
-          </div>
-
-          <div className="stat-card">
-            <h3>10+</h3>
-            <p>Projects Delivered</p>
-          </div>
-
-        </div>
-
-        
       </section>
 
-      
 
-{/* Approach */}
 
-       <section className="Approach">
-      <div className="container">
 
-        <div className="section-heading">
+      {/* Approach */}
+      <section className="approach">
+        <div className="container">
 
-          <h2>🧭My Approach</h2>
-
-        </div>
-
-        <div className="why-grid">
-
-          {/* Card 1 */}
-
-          <div className="why-card cardnew">
-            <h2>01.</h2>
-
-            <h4>Understand project goals and users first</h4>
-
+          <div className="section-heading">
+            <span className="badge">✦ My Approach</span>
+            <h2>How I <span>Work</span></h2>
+            <p>A simple process from understanding the idea to bringing it to life.</p>
           </div>
 
-          {/* Card 2 */}
+          {/* Approach Cards */}
+          <div className="grid">
+            {approach.map((item) => (
+              <article
+                className="why-card"
+                key={item.number}
+              >
+                <div className="why-card-top">
+                  <span className="why-number">
+                    {item.number}
+                  </span>
 
-          <div className="why-card cardnew">
+                  <div className="why-icon">
+                    {item.icon}
+                  </div>
+                </div>
 
-            <h2>02.</h2>
+                <div className="why-card-content">
+                  <h3>{item.title}</h3>
 
-            <h4>Focus on simple, clear design structure</h4>
+                  <span className="why-line"></span>
 
-            <img
-              src="/images/person.png"
-              alt=""
-            />
-
-          </div>
-
-          {/* Card 3 */}
-
-          <div className="why-card cardnew">
-
-            <h2>03.</h2>
-
-            <h4>Build with usability and performance in mind</h4>
-
-          </div>
-
-          {/* Card 4 */}
-
-          <div className="why-card cardnew">
-
-            <h2>04.</h2>
-
-            <h4>Create responsive, mobile-friendly websites</h4>
-
-          </div>
-
-          {/* Card 5 */}
-
-          <div className="why-card cardnew">
-
-            <h2>05.</h2>
-
-            <h4>Keep communication clear throughout the process</h4>
-
-          </div>
-
-          <div className="why-card cardnew">
-
-            <h2>06.</h2>
-
-            <h4>Keep communication clear throughout the process</h4>
-
+                  <ul>
+                    {item.description.map((point) => (
+                      <li key={point}>
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
+            ))}
           </div>
 
         </div>
-
-      </div>
-    </section>
+      </section>
 
 
-{/* skills */}
 
 
-     <section className="skills">
-      <div className="container">
 
-        <div className="section-heading">
+      {/* Skills */}
+      <section className="skills">
+        <div className="container">
 
-          <h2>🛠️  Skills & What I Deliver</h2>
-
-        </div>
-
-        <div className="why-grid">
-
-          {/* Card 1 */}
-
-          <div className="why-card cardnew">
-            <h3>UI/UX Design</h3>
-
-            <h4>Create clean, user-focused designs that improve clarity and usability</h4>
-
+          <div className="section-heading">
+            <span className="badge">✦ Skills</span>
+            <h2>Design + <span>Development</span></h2>
+            <p>The skills I use to turn ideas into polished, responsive websites.</p>
           </div>
 
-          {/* Card 2 */}
+          {/* Skills Cards */}
+          <div className="grid">
+            {skills.map((skill) => (
+              <article
+                className="why-card"
+                key={skill.number}
+              >
+                <div className="why-card-top">
+                  <span className="why-number">
+                    {skill.number}
+                  </span>
 
-          <div className="why-card cardnew">
+                  <div className="why-icon">
+                    {skill.icon}
+                  </div>
+                </div>
 
-            <h3>Web Design</h3>
+                <div className="why-card-content">
+                  <h3>{skill.title}</h3>
 
-            <h4>Build websites that work smoothly on all screen sizes</h4>
+                  <span className="why-line"></span>
 
-            <img
-              src="/images/person.png"
-              alt=""
-            />
-
-          </div>
-
-          {/* Card 3 */}
-
-          <div className="why-card cardnew">
-
-            <h3>Frontend Dev.</h3>
-
-            <h4>Turn designs into functional, interactive websites</h4>
-
-          </div>
-
-          {/* Card 4 */}
-
-          <div className="why-card cardnew">
-
-            <h3>Website Structure</h3>
-
-            <h4>Design clear layouts for better flow and engagement</h4>
-
-          </div>
-
-          {/* Card 5 */}
-
-          <div className="why-card cardnew">
-
-            <h3>Landing Page </h3>
-
-            <h4>Design pages focused on engagement and conversions</h4>
-
-          </div>
-
-          <div className="why-card cardnew">
-
-            <h3>Speed Optimization</h3>
-
-            <h4>Keep communication clear throughout the process</h4>
-
+                  <ul>
+                    {skill.descriptions.map((description) => (
+                      <li key={description}>
+                        {description}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
+            ))}
           </div>
 
         </div>
+      </section>
 
-      </div>
-    </section>
+      {/* Tools */}
+      <section className="tools">
+        <div className="container">
 
-{/* tools */}
+          <div className="section-heading">
+            <span className="badge">✦ Tools</span>
 
-    <section className="tools">
-  <div className="container ">
+            <h2>
+              Tools <span>I Work</span> With
+            </h2>
 
-    <div className="section-heading">
-      <h2>⚙️ Tools & Technologies</h2>
-    </div>
+            <p>
+              The tools I use throughout the design and development
+              process.
+            </p>
+          </div>
 
-    <div className="tools-box">
+          <div className="tools-box">
+            <div className="tools-list">
+              {tools.map((tool) => (
+                <span className="tool" key={tool}>
+                  {tool}
+                </span>
+              ))}
+            </div>
+          </div>
 
-      <div className="tools-list">
+        </div>
+      </section>
 
-        <span className="tool">HTML</span>
-        <span className="tool">CSS</span>
-        <span className="tool">JavaScript</span>
-        <span className="tool">React.js</span>
-        <span className="tool">WordPress</span>
-        <span className="tool">Figma</span>
-        <span className="tool">VS Code</span>
-        <span className="tool">Framer</span>
+      {/* Why Choose Me */}
+      <WhyAbout />
 
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<Why />
-
-      <Select />
     </>
   );
 }

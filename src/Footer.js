@@ -63,12 +63,9 @@ function Footer() {
             </div>
 
             <div className="footer-bottom">
-              <span>
-                Made by <strong><a href="/index"> Vanshika </a></strong>
-              </span>
 
               <span>
-                Built in <strong>React</strong>
+                Designed & Built by <strong>Vanshika</strong>
               </span>
             </div>
 

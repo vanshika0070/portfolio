@@ -2,9 +2,9 @@ import "./Banner.css";
 import "./Style.css";
 
 const cards = [
-  "⚡ Fast Performance",
-  "📱 Responsive Design",
-  "🎨 Modern UI/UX",
+  "⚡ Strategy-led Design",
+  "📱 Responsive Development",
+  "🎨 Built to Convert",
 ];
 
 export default function FloatingCards() {

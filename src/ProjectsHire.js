@@ -5,21 +5,21 @@ import { Link } from "react-router-dom";
 const projects = [
   {
     id: 1,
-    title: "Fervour",
-    desc: "An e-commerce experience designed to make browsing and discovering products feel effortless.",
-    image: "/images/fervour.webp",
+    title: "BankeAuction",
+    desc: "Redesigned a property auction platform to simplify property discovery and make auction information easier to navigate.",
+    image: "/images/bankeauction.avif",
     tags: ["UI/UX", "Web Design"],
-    slug: "fervour",
-    liveLink: "https://vanshika0070.github.io/fervour-blooms/",
+    slug: "bankeauction",
+    liveLink: "https://www.bankeauctions.com/",
   },
   {
     id: 2,
-    title: "Lazeez Restaurant",
-    desc: "A restaurant website built around strong visuals, easy menu discovery, and a more premium dining experience.",
-    image: "/images/lazeez.avif",
-    tags: ["UI/UX", "Frontend"],
-    slug: "lazeez",
-    liveLink: "https://lazeez-restaurant-lilac.vercel.app/",
+    title: "Dart Creatives",
+    desc: "Redesigned a modern agency website to strengthen brand presence and improve client engagement.",
+    image: "/images/dart.webp",
+    tags: ["Web Design", "WordPress"],
+    slug: "dartcreatives",
+    liveLink: "https://dartcreatives.com/",
   },
 ];
 
@@ -28,13 +28,9 @@ function Projects({ from = "home" })  {
     <section className="projects" id="featured-work">
       <div className="container">
         <div className="section-heading">
-          <span className="badge">✦ Featured Work</span>
-
-          <h2>
-           Design That <span>Performs</span>
-          </h2>
-
-          <p>Selected work designed, developed, and built around real-world goals.</p>
+          <span className="badge">✦ Selected Projects</span>
+          <h2>Work That Speaks for <span> Itself</span></h2>n 
+          <p>A few projects that show how I approach design, frontend development, and problem-solving.</p>
         </div>
 
         <div className="projects-grid">
@@ -90,7 +86,7 @@ function Projects({ from = "home" })  {
 
         <div className="btn-direction">
           <Link to="/Projectsall" className="btn-white">
-            View More Projects
+            View All Projects
           </Link>
         </div>
       </div>

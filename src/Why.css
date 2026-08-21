@@ -1,141 +1,201 @@
 
 
-.why-grid{
-    display:grid;
-    grid-template-columns:
-    repeat(3,1fr);
-    gap:22px;
-    width: min(1200px, 100%);
-    margin: auto;
-}
 
-.why-card{
-    background:var(--btn-bg);
-    border-radius:28px;
-    padding:50px;
-    position:relative;
-    overflow:hidden;
-    border:1px solid var(--border);
-    transition:.4s;
-}
-
-.why-card:hover{
-    transform:translateY(-8px);
-    border-color:#333;
-}
-
-.card1{
-    grid-column:span 1;
-}
-
-.card2{
-    grid-column:span 2;
-}
-
-.card3,
-.card4,
-.card5{
-    min-height:300px;
-}
-
-.why-card h2{
-    font-size:3rem;
-    font-weight:800;
-    margin-top:0;
-    color:var(--text);
-    text-align:start;
-}
-
-.why-card h3{
-    margin:20px 0;
-    font-size:1.6rem;
-    font-weight:700;
-    width: 100%;
-    line-height:1.3;
-}
-
-.why-card ul{
-    list-style:none;
-    padding:0;
-    margin-top:30px;
-}
-
-.why-card li{
-    color:var(--text);
-    margin-bottom:18px;
-    line-height: 1;
-}
-
-.card2 img{
-    position:absolute;
-    right:40px;
-    bottom:0;
-    width:260px;
-    opacity:.18;
+/* =========================================
+   GRID
+========================================= */
+.why-grid {
+  display: grid;
+  width: 1200px;
+  margin: auto;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
 }
 
 
+.grid {
+  display: grid;
+  width: 1200px;
+  margin: auto;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
 
+/* =========================================
+   CARD
+========================================= */
+
+.why-card {
+  position: relative;
+  padding: 35px;
+  background: #101010;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-h);
+  background: #121212;
+}
+
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.why-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 42px;
+}
+
+.why-number {
+  font-size: 2.5rem;
+  line-height: 1;
+  font-weight: 700;
+  color: #c8c8c8;
+  letter-spacing: -1px;
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.why-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: #181818;
+  border: 1px solid #252525;
+  color: #cfcfcf;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.why-card-content h3 {
+  margin: 0;
+  max-width: 330px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+
+/* =========================================
+   SMALL ACCENT LINE
+========================================= */
+
+.why-line {
+  display: block;
+  width: 32px;
+  height: 2px;
+  margin: 20px 0 22px;
+  background: #bcbcbc;
+  border-radius: 10px;
+}
+
+
+/* =========================================
+   POINTS
+========================================= */
+
+.why-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.why-card li {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  color: #bdbdbd;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.check {
+  color: #cfcfcf;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
 
 @media(max-width:1199px) and (min-width:758px){
 
-.why-grid{
-grid-template-columns:1fr;
-}
+  .why-section {
+    padding: 90px 25px;
+  }
 
-.card2{
-grid-column:span 1;
-}
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-.section-heading h2{
-font-size:2.8rem;
-}
+  .why-card-large,
+  .why-card-small {
+    grid-column: span 1;
+  }
 
-.why-card:hover{
-    transform:none;
-}
+  .why-card {
+    min-height: 290px;
+    padding: 35px 30px;
+  }
 
-}
-
-
-
-
-
-
-
-@media(max-width:757px){
-
-    
-.why-grid{
-grid-template-columns:1fr;
-    padding: 0 10px;
-}
-
-.card2{
-grid-column:span 1;
-}
-
-.why-card:hover{
-    transform:none;
+  .why-card-top {
+    margin-bottom: 32px;
+  }
 }
 
 
-.why-card h2{
-font-size:2.3rem;
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 757px) {
+
+.why-grid {
+  display: grid;
+   width: 100%;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
 }
 
-.why-card h3{
-font-size:1.5rem !important
-;
+.why-card-large {
+  grid-column: span 1;
 }
 
-.why-card{
-padding:28px;
+/* Last three cards = 2 columns each */
+.why-card-small {
+  grid-column: span 1;
 }
 
-.why-card:hover{
-    transform:none;
+.why-card:hover {
+  transform: none;
 }
-
-
 }

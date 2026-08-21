@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./CollabForm.css";
+import "./Contact.css";
 import "./Style.css";
 
 
@@ -70,7 +70,7 @@ const onSubmit = async (event) => {
           required
           pattern="^[A-Za-z .'-]+$"
           autoComplete="name"
-          placeholder="Enter Your Name"
+          placeholder="Your Name"
         />
       </div>
 
@@ -85,7 +85,7 @@ const onSubmit = async (event) => {
             className="form-input"
             required
             autoComplete="email"
-            placeholder="Enter Email Address"
+            placeholder="Email Address"
           />
         </div>
 
@@ -97,7 +97,7 @@ const onSubmit = async (event) => {
             className="form-input"
             required
             pattern="^[A-Za-z .'-]+$"
-            placeholder="Niche e.g. Restaurant, Real Estate"
+            placeholder=" Business / industry"
           />
         </div>
       </div>
@@ -112,7 +112,7 @@ const onSubmit = async (event) => {
           defaultValue=""
         >
           <option value="" disabled>
-            Select a Service
+            What do you need help with?
           </option>
 
           <option value="Landing Page">Landing Page</option>
@@ -132,7 +132,7 @@ const onSubmit = async (event) => {
           defaultValue=""
         >
           <option value="" disabled>
-            Select your Budget
+            Estimated Budget
           </option>
 
           <option value="₹5,000-₹10,000">₹5,000-₹10,000</option>
@@ -149,18 +149,18 @@ const onSubmit = async (event) => {
           name="message"
           rows="5"
           className="form-textarea"
-          placeholder="What are you building? Share the goals and timeline..."
+          placeholder="Tell me about your project, goals, and timeline..."
         />
       </div>
 
-       <button className="btn-form" type="submit">
-        Send Project Inquiry
+      <button className="submit-button" type="submit">
+          <span>SEND PROJECT DETAILS</span>
       </button>
 
       <p className="status-message">{result}</p>
 
       <p className="reply">
-        (We will reach out to you within 24hrs)
+        I'll get back to you within 24 hours.
       </p>
 
     

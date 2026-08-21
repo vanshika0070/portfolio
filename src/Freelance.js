@@ -2,10 +2,10 @@
 import "./Style.css";
 
 import AboutFreelance from "./AboutFreelance";
-import Projects from "./Projects";
+import Projectsfreelance from "./Projectsfreelance";
 import Services from "./Services";
 import Testimonials from "./Testimonials";
-import FreelanceForm from "./FreelanceForm";
+import ContactFreelance from "./ContactFreelance";
 
 
 import { Link } from "react-router-dom";
@@ -27,10 +27,10 @@ function Freelance() {
 
 
       <AboutFreelance />
-       <Projects  from="freelance" />
+       <Projectsfreelance  from="freelance" />
         <Services />
         <Testimonials />
-         <FreelanceForm />
+         <ContactFreelance />
     </>
   );
 }

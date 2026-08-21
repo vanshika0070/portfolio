@@ -7,9 +7,7 @@ const services = [
     id: "01",
     title: "Landing Pages",
     content: [
-      "Built with code, WordPress & modern tools",
-      "Mobile-friendly & fully responsive",
-      "Optimized for conversions",
+      "Focused pages designed to explain your offer clearly and drive action.",
     ],
   },
  
@@ -17,36 +15,28 @@ const services = [
     id: "02",
     title: "Business Websites",
     content: [
-      "Professional business websites",
-      "SEO-friendly structure",
-      "Fast loading performance",
+      "Complete websites that give your business a professional and trustworthy online presence.",
     ],
   },
   {
     id: "03",
     title: "Website Design",
     content: [
-      "Custom website designs",
-      "Responsive layouts",
-      "Brand-focused visuals",
+      "Custom layouts and interfaces designed around your brand, content, and users.",
     ],
   },
    {
     id: "04",
     title: "UI/UX Design",
     content: [
-      "Clean and modern interfaces",
-      "User-focused layouts",
-      "Wireframes & prototypes",
+      "Clear, intuitive interfaces that make websites easier and more enjoyable to use.",
     ],
   },
   {
     id: "05",
     title: "Website Redesign",
     content: [
-      "Modernize existing websites",
-      "Improve speed & UX",
-      "Increase conversions",
+      "Improve an existing website's structure, visuals, usability, and responsiveness.",
     ],
   },
 ];
@@ -56,20 +46,18 @@ export default function Services() {
 
   return (
     <>
-      <section className="services">
+      <section className="services" id="services">
         <div className="container">
           <div className="section-heading">
           <span className="badge">
-            ⦿ Services
+            ✦ Services
           </span>
 
           <h2>
             What I Can Do <span>For You</span>
           </h2>
 
-          <p>
-            Explore a suite of design services to elevate your brand.
-          </p>
+          <p>Choose what you need, or tell me what you're trying to build and I'll help you figure out the right approach.</p>
         </div>
 
         <div className="services-box">
@@ -89,7 +77,7 @@ export default function Services() {
                 <div className="service-content">
                   <ul>
                     {service.content.map((item, i) => (
-                      <li key={i}>✓ {item}</li>
+                      <li key={i}> {item}</li>
                     ))}
                   </ul>
                 </div>
@@ -109,36 +97,36 @@ export default function Services() {
 
   <div className="price-row">
     <span>Landing Page</span>
-    <span className="price">Starts at ₹10,000</span>
+    <span className="price">Starting at ₹10,000</span>
   </div>
 
   <div className="price-row">
     <span>Business Website</span>
-    <span className="price">Starts at ₹30,000</span>
+    <span className="price">Starting at ₹30,000</span>
   </div>
 
   <div className="price-row">
     <span>Web Redesign</span>
-    <span className="price">Starts at ₹20,000</span>
+    <span className="price">Starting at ₹20,000</span>
   </div>
 
   <div className="price-row">
     <span>Framer Development</span>
-    <span className="price">Starts at ₹25,000</span>
+    <span className="price">Starting at ₹25,000</span>
   </div>
 
   <div className="price-row">
     <span>UI/UX Design</span>
-    <span className="price">Starts at ₹50,000</span>
+    <span className="price">Starting at ₹50,000</span>
   </div>
 
   
-  <h3 className="important-title">⚠️ Important:</h3>
+  <h3 className="important-title">Every project is different</h3>
 
-    <p>Every project is unique. Final pricing depends on pages, features and timeline.</p>
+    <p>Final pricing depends on the number of pages, features, content, and timeline.</p>
 
 <a href="#freelanceform" className="btn-white">
-  Get a Quote
+  Get a project estimate
 </a>
   
 

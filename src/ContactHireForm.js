@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./CollabForm.css";
 import "./Style.css";
 
 export default function HireForm() {
@@ -67,7 +66,7 @@ export default function HireForm() {
           required
           pattern="^[A-Za-z .'-]+$"
           autoComplete="name"
-          placeholder="Enter Your Name"
+          placeholder="Your Name"
         />
       </div>
 
@@ -83,7 +82,7 @@ export default function HireForm() {
             className="form-input"
             required
             autoComplete="email"
-            placeholder="Enter Email Address"
+            placeholder="Email Address"
           />
         </div>
 
@@ -95,7 +94,7 @@ export default function HireForm() {
           name="company"
           className="form-input"
           required
-          placeholder="Enter Your Company name"
+          placeholder="Company / Organization"
         />
        </div>
 
@@ -109,7 +108,7 @@ export default function HireForm() {
           name="job_title"
           className="form-input"
           required
-          placeholder="Job Title"
+          placeholder="Role / Opportunity"
         />
        </div>
 
@@ -120,12 +119,12 @@ export default function HireForm() {
           name="message"
           rows="5"
           className="form-textarea"
-          placeholder="Tell me about the opportunity..."
+          placeholder="Tell me about the role, team, and what you’re looking for..."
         />
       </div>
-
-      <button className="btn-form" type="submit">
-        Send Hiring Inquiry
+      
+      <button className="submit-button" type="submit">
+          <span>SEND HIRING INQUIRY</span>
       </button>
 
       <p className="status-message">{result}</p>

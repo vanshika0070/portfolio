@@ -29,15 +29,18 @@ function Header() {
         </div>
 
         {/* CENTER LINKS */}
-        <ul className="nav-links">
+        <ul className="nav-links">   
           <li>
-            <Link to="/#why-me">Why Me?</Link>
-          </li>
-          <li>
-            <Link to="/#featured-work">Featured Work</Link>
-          </li>
+            <Link to="/#featured-work">Work</Link>
+          </li>      
           <li>
             <Link to="/#about">About</Link>
+          </li>
+          <li>
+            <Link to="/freelance">Services</Link>
+          </li>
+          <li>
+            <Link to="/hire">Work With Me</Link>
           </li>
         </ul>
       </nav>

@@ -1,85 +1,129 @@
-
 import "./Style.css";
 import "./About.css";
 
+import {
+  SiHtml5,
+  SiCss,
+  SiJavascript,
+  SiReact,
+  SiWordpress,
+  SiFigma,
+  SiGithub,
+  SiFramer,
+} from "react-icons/si";
+
+import { VscVscode } from "react-icons/vsc";
+
 function AboutJob() {
   return (
-    <section className="aboutjob" id="about">
+    <section className="about">
       <div className="container">
 
-        <div className="section-heading">
+        <div className="aboutfull-grid">
 
-          <span className="badge">
-            ⦿ Built for Impact
-          </span>
-
-          <h2><span>What I Bring </span>to the Table</h2>
-
-          <p>Skills and tools — the essentials, at a glance.</p>
-
-        </div>
-
-      <div className="about-grid">
-
-          {/* Left */}
+          <div className="section-heading">
+            <span className="badge">✦ Frontend Designer & Developer</span>
+            <h2>A Designer Who Can <span>Build</span> </h2>
+            <p>Frontend development, UI/UX design, and the ability to take a website from idea to implementation.</p>
+          </div>
 
           <div className="about-content">
+            <p>I build fast, responsive, and accessible websites with a strong focus on design quality, performance, and clean code.</p>
+          </div>
 
-            <h3>
-              Hi, I'm <span>Vanshika Manav</span>
-            </h3>
-
-            <p>Web designer and developer focused on building modern, responsive websites with strong attention to usability, performance, and clean design.</p>
-
-            <p>Comfortable working independently or within a team, with clear communication and a focus on delivering reliable, high-quality work — every time.</p>
-
-                <hr />
-
-                 <div className="btn-direction">
-         <a href="#featured-work"  className="btn-white">
-            View My Work
-          </a>
         </div>
 
+
+        <div className="aboutjob-grid">
+
+          {/* Left */}
+          <div className="about-content">
+            <h3>Core Skills</h3>
+
+            <ul>
+              <li>⚡ Frontend Development</li>
+              <li>⚡ UI/UX Design</li>
+              <li>⚡ Responsive Web Design</li>
+              <li>⚡ React Development</li>
+              <li>⚡ WordPress Development</li>
+            </ul>
           </div>
+
+
+          {/* Divider */}
+          <hr />
+
 
           {/* Right */}
 
           <div className="about-content">
+            <h3>Tools & Technologies</h3>
 
-  <h3>Skills</h3>
-  <div className="container tools">
-    <div className="tools-list">
-      <span className="tool">Frontend Development</span> 
-      <span className="tool">UI/UX Design</span>  
-      <span className="tool">SEO-Friendly Websites</span>
-      <span className="tool">Responsive Web Design</span>
-      <span className="tool">Landing Page Development</span>
-      <span className="tool">Component-Based Development</span>
-      <span className="tool">Website Performance Optimization</span>
-      <span className="tool">Cross-Browser Compatibility</span>
-    </div>
+            <div className="tooltech">
+
+  <div className="stat-card">
+    <SiHtml5 className="tech-icon html-icon" />
+    <p>HTML5</p>
   </div>
 
-  <br />
-  <hr />
+  <div className="stat-card">
+    <SiCss className="tech-icon css-icon" />
+    <p>CSS</p>
+  </div>
 
-  <h3>Tools & Technologies</h3>
-  <div className="container tools">
-    <div className="tools-list">
-      <span className="tool">HTML5</span>
-      <span className="tool">CSS</span>
-      <span className="tool">JavaScript (ES6+)</span>
-      <span className="tool">React</span>
-      <span className="tool">WordPress</span>
-      <span className="tool">Figma</span>
-      <span className="tool">Framer</span>
-      <span className="tool">VS Code</span> 
-      <span className="tool">GitHub</span>
-    </div>
+  <div className="stat-card">
+    <SiJavascript className="tech-icon js-icon" />
+    <p>JavaScript</p>
+  </div>
+
+  <div className="stat-card">
+    <SiReact className="tech-icon react-icon" />
+    <p>React</p>
+  </div>
+  
+  <div className="stat-card">
+    <SiFigma className="tech-icon figma-icon" />
+    <p>Figma</p>
+  </div>
+
+  <div className="stat-card">
+    <SiFramer className="tech-icon framer-icon" />
+    <p>Framer</p>
+  </div>
+
+  <div className="stat-card">
+    <SiWordpress className="tech-icon wordpress-icon" />
+    <p>WordPress</p>
+  </div>
+
+  <div className="stat-card">
+    <SiGithub className="tech-icon github-icon" />
+    <p>GitHub</p>
+  </div>
+
+  <div className="stat-card">
+    <VscVscode className="tech-icon vscode-icon" />
+    <p>VS Code</p>
   </div>
 
 </div>
+          </div>
+          
+          <hr/>
+
+        </div>
+
+        <div className="aboutjobb-grid">
+
+          {/* Left */}
+          <div className="about-content">
+            <div className="btn-direction">
+              <a href="#featured-work" className="btn-white">
+                View My Work
+              </a>
+            </div>
+          </div>
+
 
         </div>
 
@@ -89,3 +133,13 @@ function AboutJob() {
 }
 
 export default AboutJob;
+
+
+
+
+
+
+
+
+
+

@@ -19,6 +19,17 @@ function Banner() {
     }
   };
 
+  const handleViewWork = () => {
+    const projectsSection = document.getElementById("featured-work");
+
+    if (projectsSection) {
+      projectsSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <section className="hero">
       <div className="container">
@@ -30,7 +41,7 @@ function Banner() {
           <h1 className="gray">Convert.</h1>
 
           <p>
-            Fast, responsive websites with modern frontend technologies.
+            I design and build websites that look sharp, work smoothly, and help businesses turn visitors into customers.
           </p>
         </div>
 
@@ -41,59 +52,59 @@ function Banner() {
 
           <div className="hero-info">
             <span className="tag">
-              Frontend & Web Designer
+              WEB DESIGNER & FRONTEND DEVELOPER
             </span>
 
             <p>
-              I build fast, responsive websites that combine modern design,
-              clean code, and exceptional user experience.
+              I combine thoughtful design with clean frontend development to create websites that are easy to use, responsive, and built around your goals.
             </p>
 
-            <p>⭐ 2+ years experience • 10+ websites delivered</p>
+            <p>
+              ⭐ 2+ years experience • 10+ websites delivered
+            </p>
 
             <div className="hero-buttons">
               <div className="buttons">
 
                 <div className="button-group">
                   <Link to="/freelance" className="btn-white">
-                    Start a Project
+                    Need a website?
                   </Link>
-                  <small>For businesses & startups</small>
+                  <small>Start a Project</small>
                 </div>
 
                 <div className="button-group">
                   <Link to="/hire" className="btn-dark">
-                    View Resume
+                    Looking to Hire?
                   </Link>
-                  <small>For hiring & opportunities</small>
+                  <small>View Resume</small>
                 </div>
-
               </div>
             </div>
           </div>
-
+          
         </div>
 
         {/* Hero Image */}
-        <a href="/projectsall">
-          <div
-            className="hero-image"
-            onMouseMove={handleMouseMove}
-          >
-            <img
-              src="/images/banner.avif"
-              alt="Website Preview"
-              className="image"
-            />
+        <div
+          className="hero-image"
+          onMouseMove={handleMouseMove}
+          onClick={handleViewWork}
+        >
+          <img
+            src="/images/banner.webp"
+            alt="Website Preview"
+            className="image"
+          />
 
-            <button
-              ref={buttonRef}
-              className="hover-btn"
-            >
-              View Project
-            </button>
-          </div>
-        </a>
+          <button
+            ref={buttonRef}
+            className="hover-btn"
+            type="button"
+          >
+            View My Work
+          </button>
+        </div>
 
       </div>
     </section>
