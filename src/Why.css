@@ -9,7 +9,7 @@
   width: 1200px;
   margin: auto;
   grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
+  gap: 20px;
 }
 
 
@@ -18,7 +18,7 @@
   width: 1200px;
   margin: auto;
   grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+  gap: 20px;
 }
 
 /* =========================================
@@ -148,28 +148,19 @@
 ========================================= */
 
 @media(max-width:1199px) and (min-width:758px){
+.grid {
+  display: grid;
+   width: 100%;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 15px;
+}
 
-  .why-section {
-    padding: 90px 25px;
-  }
-
-  .why-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .why-card-large,
-  .why-card-small {
-    grid-column: span 1;
-  }
-
-  .why-card {
-    min-height: 290px;
-    padding: 35px 30px;
-  }
-
-  .why-card-top {
-    margin-bottom: 32px;
-  }
+.why-grid {
+  display: grid;
+   width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
 }
 
 

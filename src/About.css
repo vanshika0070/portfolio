@@ -255,12 +255,52 @@ width: 90%;
 
 
 @media(max-width:1199px) and (min-width:758px){
-.tool{
-        margin:0;
-        font-size: 0.9rem;      
-        padding:10px 14px;
-        flex:0 0 auto;
-    }
+
+.about-grid {
+  display: grid;
+   width: 100%;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+}
+
+.aboutfull-grid {          /* freelance */
+  width: 100%;
+}
+
+
+.aboutjob-grid {
+  display: grid;
+  grid-template-columns:  repeat(1, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+ 
+.statsFL {                  /* freelance */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+ 
+
+.about-image-card{   /* home, page */ 
+    display:flex;
+    padding: 0 50px 0 0 ;
+    align-items:flex-start;
+    justify-content:flex-start;
+}
+
+.about-image-card img{     /* home, page */ 
+    object-fit:cover;
+    width:70%;
+    border-radius: 15px;
+}
+
+.tools-box{
+    width: 100% !important;
+}
+
+
+
 
 }
 
@@ -274,7 +314,6 @@ width: 90%;
   width: 100%;
   margin: auto;
   gap: 20px;
-  padding: 0 10px;
 }
 
 .about-image-card{   /* home, page */ 
@@ -295,7 +334,6 @@ width: 90%;
 .aboutfull-grid {          /* freelance */
   width: 100%;
   gap: 10px !important;
-    padding: 0 10px;
 }
  
 .statsFL {                  /* freelance */
@@ -308,14 +346,10 @@ width: 90%;
   grid-template-columns:  repeat(1, 1fr);
   gap: 10px;
   width: 100%;
-    padding: 0 10px;
 }
 
-.tooltech {
-  display: grid;
-  grid-template-columns:  repeat(2, 1fr);
-  gap: 10px;
-  width: 100%;
+.tools-box{
+    width: 100%;
 }
 
 .aboutjobb-grid {
@@ -323,7 +357,6 @@ width: 90%;
   grid-template-columns: repeat(1, 1fr);
   gap: 20px;
   width: 100%;
-    padding: 0 10px;
 }
 
 .aboutjobb-grid > .about-content {
@@ -354,8 +387,7 @@ width: 100%;
 }
 
 
-   .tools-box{
-        padding:20px;
+   .tools{
             width: 100%;
     }
 

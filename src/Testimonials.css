@@ -1,7 +1,7 @@
 .testimonial-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:25px;
+    gap:20px;
     width:1200px;
     margin: auto;
 }
@@ -103,8 +103,17 @@
 @media (max-width:1199px) and (min-width:758px){
 
     .testimonial-grid{
-        grid-template-columns:1fr;
-    }
+        display: grid;
+   width: 100%;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 15px;
+}
+
+
+.testimonial-card:hover{
+    border-color:var(--border-h);
+    transform:none;
+}
 
 }
 
@@ -120,9 +129,9 @@
     margin: auto;
 }
 
-
     .testimonial-card:hover{
        transform:none;
+        border-color:var(--border-h);
     }
 
     .testimonial-top h3{

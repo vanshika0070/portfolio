@@ -114,7 +114,7 @@
 .floating-cards{
     display:flex;
     flex-wrap:wrap;
-    gap:15px;
+    gap:20px;
     margin-top:28px;
     max-width:650px;
 }
@@ -181,47 +181,60 @@
 
 
 /* ================= TABLET ================= */
+@media (max-width: 1199px) and (min-width: 758px) {
 
-@media(max-width:1199px) and (min-width:758px){
-
-    .hero{
-        text-align:left;
-        line-height: 2;
+      .hero{
+        padding:30px 10px;
     }
 
-    .hero-title{
+    .hero-title {
+        width: 100%;
         margin-top: 100px;
+        box-sizing: border-box;
     }
 
-    .hero-title h1{
+    .hero-title h1 {
+        width: 100%;
         font-size: 4.5rem;
         letter-spacing: -3px;
     }
 
-    .hero-image{
+    .floating-cards{
+    gap:15px;
+}
+
+    .hero-image {
+        width: 100% !important;
+        max-width: none !important;
         height: 450px;
         margin-top: 50px;
+        box-sizing: border-box;
     }
 
-    .hero-image:hover .image{
-    transform: none;
+    .hero-image:hover .image {
+        transform: none;
     }
 
-       .hero-bottom{
-        flex-direction:column;
-        gap:35px;
-        margin-top:25px;
+    .hero-bottom {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        margin-top: 25px;
+        box-sizing: border-box;
     }
 
-    .hero-bottom .floating-cards{
-        width:100%;
+    .hero-bottom .floating-cards {
+        width: 100%;
+        box-sizing: border-box;
     }
 
-    .hero-info{
-        width:100%;
-        max-width:100%;
-        margin:0;
-        padding:0;
+    .hero-info {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
 }
 
@@ -247,6 +260,10 @@
         letter-spacing:-2px;
         text-align:left;
     }
+
+    .floating-cards{
+    gap:10px;
+}
 
     .hero-image{
         height:300px;

@@ -16,7 +16,7 @@
 .hire-contact-grid {
   display: grid;
   grid-template-columns: 0.92fr 1.08fr;
-  gap: 28px;
+  gap: 20px;
   position: relative;
   width: 1200px;
   margin: auto;
@@ -351,7 +351,7 @@
   width: 1200px;
   margin: auto;
   gap: 40px;
-  margin-top: 28px;
+  margin-top: 20px;
   padding: 15px 20px;
   border: 1px solid var(--border);
   border-radius: 13px;
@@ -383,7 +383,7 @@
 .whatsapp-qr-wrapper {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 15px;
 }
 
 .whatsapp-qr {
@@ -391,7 +391,7 @@
   height: 90px;
   display: block;
   padding: 5px;
-  background: #ffffff;
+  background: var(--white);
   border-radius: 8px;
 }
 
@@ -498,6 +498,21 @@
 
 @media (max-width: 1199px) and (min-width:758px) {
 
+  
+.freelance-contact-grid {
+  display: grid;
+  width: 100%;
+   grid-template-columns: repeat(1, 1fr);
+  gap: 15px;
+}
+
+.hire-contact-grid {
+  display: grid;
+    width: 100%;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 15px;
+}
+
   .hire-contact-grid {
     grid-template-columns: 1fr;
   }
@@ -506,19 +521,50 @@
   .hire-form-card {
     min-height: auto;
   }
+  
+.whatsapp-card {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 25px;
+    margin-top: 10px;
+   width: 100%;
+}
 
-  .hire-whatsapp-card {
-    grid-template-columns: 1fr 1fr;
+  .whatsapp-qr-wrapper {
+    justify-content: center;
+    flex-direction: column;
   }
 
-  .whatsapp-button {
-    justify-self: start;
+   .whatsapp-qr{
+  width: 40%;
+  height:auto;
+  margin: auto;
+  display: block;
+  padding: 5px;
+  background: var(--white);
+  border-radius: 8px;
+}
+
+ .whatsapp-scan{
+  width: 40%;
+  height:auto;
+}
+
+  .whatsapp-btn {
+    margin-top: 50px;
   }
 
+    .whatsapp-button {
+margin: auto;
+    justify-content: center;
+padding: 9px;
+    justify-self: stretch;
+  }
+  
   .whatsapp-response {
-    grid-column: 2;
-    justify-self: start;
-    margin: 0;
+    grid-column: auto;
+    justify-self: center;
+    margin: -15px 0 0;
   }
 }
 
@@ -533,13 +579,13 @@
   display: grid;
    width: 100%;
  grid-template-columns: repeat(1, 1fr);
-  gap: 25px;
+  gap: 10px;
 }
 
 .hire-contact-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 25px;
+  gap: 10px;
    width: 100%;
 }
 
@@ -566,7 +612,6 @@
   width: 100%;
 }
 
-
 .submit-button {
   width: 100%;
   padding: 11px 9px ;
@@ -577,6 +622,7 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 25px;
+    margin-top: 10px;
    width: 100%;
 }
 
@@ -642,7 +688,7 @@ padding: 9px;
     white-space: nowrap;
   }
 
-  s
+  
   .whatsapp-response {
     grid-column: auto;
     justify-self: center;

@@ -283,14 +283,6 @@ ul {
   background: var(--black);
 }
 
-  .banner{
-    height:auto;
-    min-height:100vh;
-    grid-template-columns:1fr !important;
-    grid-template-rows:70vh auto;
-    padding:4px;
-    gap:10px;
-  }
 
   h1{
     font-size:3rem;
@@ -303,7 +295,7 @@ ul {
 
   section{
   margin-bottom: 170px;
-  padding: 0 20px !important;
+  padding: 0 30px !important;
 }
 
     .buttons{
